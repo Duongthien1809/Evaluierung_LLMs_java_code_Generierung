@@ -1,0 +1,8 @@
+.env
+Daten/LeetCode
+reference_results.json
+test_results.json
+.idea
+Daten/.DS_Store
+test.py
+.DS_Store

@@ -1,8 +1,8 @@
 openai~=1.37.0
 requests~=2.32.3
-transformers
+transformers~=4.42.4
 torch
-evalplus
+evalplus~=0.2.1
 
 python-dotenv~=1.0.1
 h11~=0.14.0
@@ -22,3 +22,7 @@ anyio~=4.4.0
 numpy~=1.26.4
 pandas~=2.2.2
 pydantic_core~=2.20.1
+codebleu~=0.7.0
+code_bert_score~=0.4.1
+langchain~=0.2.13
+safetensors~=0.4.3

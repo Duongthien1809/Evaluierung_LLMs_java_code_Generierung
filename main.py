@@ -2,111 +2,112 @@ import argparse
 import json
 import os
 
-from Scripts.evaluate.evaluate_code import evaluate_code
-from Scripts.evaluate.metrics import save_results_as_jsonl
-from Scripts.generate_code import generate_code
-from Scripts.utils import insert_code_into_solution_frame, insert_test_code_into_solution_test_frame
+from scripts.evaluation import process_evaluations
+from scripts.utils import save_results_as_jsonl, save_summary_as_jsonl
 
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
+os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 
-def clean_generated_code(code):
+def calculate_average(scores):
+    return sum(scores) / len(scores) if scores else 0
+
+
+def summarize_results(results, count, success, evaluation_method, model_name):
     """
-    Entfernt unerlaubte Zeichen wie Backticks aus dem generierten Code und
-    extrahiert die Klasse und ihren Inhalt bis zur schließenden Klammer.
-    Die Import-Anweisungen werden beibehalten, falls vorhanden.
-
-    :param code: Der generierte Code als String.
-    :return: Bereinigter Code der Klasse und ihres Inhalts.
+    Fasst die Ergebnisse der Evaluierung zusammen.
+    Berechnet den durchschnittlichen Pass@k-Wert oder die durchschnittlichen Scores, je nach Evaluierungsmethode.
     """
-    # Entferne unerlaubte Zeichen wie Backticks
-    code = code.replace('`', '')
+    if evaluation_method == "pass_at_k":
+        summary = results
+    elif evaluation_method == "normal":
+        success_rate = (success / count) if count > 0 else 0
 
-    # Finde den Beginn des relevanten Codes (Import-Anweisungen oder Klasse)
-    start_index = code.find('import ')
-    if start_index == -1:
-        start_index = code.find('class ')
-    if start_index == -1:
-        return ""  # Keine Klasse gefunden
+        # Extrahieren von CodeBLEU und CodeBERT Scores
+        codeBleu_scores = [result.get("code_bleu_score", {}) for result in results]
+        codeBert_scores = [result.get("codeBert", {}) for result in results]
+        compilable_success = [result.get("compilable", False) for result in results if result.get("compilable", False)]
 
-    # Extrahiere den Code ab dem Beginn der Imports oder Klasse
-    code = code[start_index:]
+        # Durchschnittliche Werte für precision, recall und f1 berechnen
+        precision_scores = [score.get("precision", 0) for score in codeBert_scores]
+        recall_scores = [score.get("recall", 0) for score in codeBert_scores]
+        f1_scores = [score.get("f1", 0) for score in codeBert_scores]
 
-    # Finde die Position des letzten schließenden geschweiften Klammerzeichens
-    open_braces = 0
-    end_index = -1
-    for i, char in enumerate(code):
-        if char == '{':
-            open_braces += 1
-        elif char == '}':
-            open_braces -= 1
-            if open_braces == 0:
-                end_index = i
-                break
+        # Durchschnittliche Werte für CodeBLEU-Komponenten berechnen
+        ngram_match_scores = [result.get("ngram_match_score", 0) for result in codeBleu_scores]
+        weighted_ngram_match_scores = [result.get("weighted_ngram_match_score", 0) for result in codeBleu_scores]
+        syntax_match_scores = [result.get("syntax_match_score", 0) for result in codeBleu_scores]
+        dataflow_match_scores = [result.get("dataflow_match_score", 0) for result in codeBleu_scores]
 
-    if end_index == -1:
-        return ""  # Keine schließende Klammer gefunden
+        summary = {
+            "model_name": model_name,
+            "total_evaluated": count,
+            "completion_evaluation": round(success_rate, 4),
+            "compilable_evaluation": len(compilable_success) / count,
+            "code_bleu_average_score": {
+                "bleu_score": calculate_average([result.get("codebleu", 0) for result in codeBleu_scores]),
+                "ngram_match_score": calculate_average(ngram_match_scores),
+                "weighted_ngram_match_score": calculate_average(weighted_ngram_match_scores),
+                "syntax_match_score": calculate_average(syntax_match_scores),
+                "dataflow_match_score": calculate_average(dataflow_match_scores),
+            },
+            "codeBert_average_score": {
+                "codeBert_average_precision": calculate_average(precision_scores),
+                "codeBert_average_recall": calculate_average(recall_scores),
+                "codeBert_average_f1": calculate_average(f1_scores)
+            }
+        }
+    else:
+        raise ValueError(f"Unbekannte Evaluierungsmethode: {evaluation_method}")
+    return results, summary
 
-    # Extrahiere den Code bis zur schließenden Klammer
-    return code[:end_index + 1].strip()
+
+def ensure_directory_exists(filename, model_name):
+    """Stellt sicher, dass ein Verzeichnis unter './output/' mit dem Modellnamen existiert.
+       Wenn nicht, wird es erstellt und der vollständige Pfad zur Datei zurückgegeben."""
+    # Erstelle den vollständigen Pfad zum Verzeichnis unter './output/'
+    directory = os.path.join('./output', model_name)
+
+    # Überprüfe, ob das Verzeichnis existiert, und erstelle es bei Bedarf
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    # Kombiniere das Verzeichnis mit dem Dateinamen
+    file_path = os.path.join(directory, filename)
+
+    return file_path
 
 
-def main(model_name, model_type, tokenizer_name, output_file, json_file):
-    # Lade die JSON-Datei
-    with open(json_file, 'r') as file:
-        data = json.load(file)
+def load_leetcode_dataset():
+    data = []
+    with open('leetCode_dataset.json', 'r') as file:
+        for line in file:
+            # Strip whitespace and commas, then load JSON
+            line = line.strip().rstrip(',')
+            data.append(json.loads(line))
+    return data
 
-    results = []
-    count = 0
 
-    # Iteriere über die Daten in der JSON-Datei
-    for entry in data:
-        count += 1
-        prompts = entry.get("prompts", [])
-        codes = entry.get("reference_codes", [])
-        tests = entry.get("test_codes", [])
-        for prompt_entry in prompts:
-            prompt_file = prompt_entry["file"]
-            prompt_content = prompt_entry["content"]
+def main(model_name, model_type, output_file, evaluation_method, max_count):
+    # Load data from the improperly formatted JSON file
+    data = load_leetcode_dataset()
 
-            for code_entry in codes:
-                code_file = code_entry["file"]
-                code_content = code_entry["content"]
+    # Proceed with evaluation
+    results, success = process_evaluations(data, model_name, model_type,
+                                           evaluation_method, max_count=max_count)
 
-                for test_entry in tests:
-                    test_file = test_entry["file"]
-                    test_content = test_entry["content"]
+    # Summarize results
+    results, summary = summarize_results(results, max_count, success, evaluation_method, model_name)
 
-                    # # Verarbeite die Testfälle (hier wird vorausgesetzt, dass die Testfälle in einer spezifischen Struktur vorliegen)
-                    # test_cases = eval(test_content)  # Dies kann je nach Format des Inhalts angepasst werden
+    # Ensure directories exist
 
-                    # Generiere neuen Code basierend auf dem Prompt
+    if evaluation_method == "pass_at_k":
+        summary_file = "./output/pass@ksum.jsonl"
+    else:
+        save_results_as_jsonl(results, ensure_directory_exists(output_file, model_name))
+        summary_file = "./output/summary.jsonl"
 
-                    generated_code, class_name = generate_code(model_name, model_type, tokenizer_name, prompt_content)
-                    # print("Generated code: ", clean_generated_code(generated_code))
-                    if clean_generated_code(generated_code) != "":
-                        # Bewerte den generierten Code
-                        evaluation_results = evaluate_code(
-                            insert_code_into_solution_frame(clean_generated_code(generated_code)),
-                            insert_test_code_into_solution_test_frame(test_content))
-                        # quality_analysis = analyze_code_quality(generated_code)
-                        result = {
-                            "model_name": model_name,
-                            "model_type": model_type,
-                            "tokenizer_name": tokenizer_name,
-                            # "prompt_file": prompt_file,
-                            # "code_file": code_file,
-                            # "test_file": test_file,
-                            # "generated_code": generated_code,
-                            "Korrektheit": evaluation_results,
-                            # "quality_analysis": quality_analysis
-                        }
-                        results.append(result)
-        if count == 1000:
-            break
-
-    # Speichere die Ergebnisse als JSONL-Datei
-    save_results_as_jsonl(results, output_file)
+    # Save results and summary
+    save_summary_as_jsonl(summary, summary_file)
 
 
 if __name__ == "__main__":
@@ -114,10 +115,13 @@ if __name__ == "__main__":
     parser.add_argument('--model_name', type=str, required=True, help='Name oder Pfad des Modells')
     parser.add_argument('--model_type', type=str, required=True, choices=['openai', 'huggingface', 't5'],
                         help='Typ des Modells (openai, huggingface, t5)')
-    parser.add_argument('--tokenizer_name', type=str, required=True, help='Name oder Pfad des Tokenizers')
-    parser.add_argument('--output_file', type=str, required=True, help='Pfad zur Ausgabe-JSONL-Datei')
-    parser.add_argument('--json_file', type=str, required=True, help='Pfad zur Eingabe-JSON-Datei')
+    parser.add_argument('--output_file', type=str,
+                        help='Pfad zur Ausgabe-JSONL-Datei, nur wenn evaluation methode ist normal')
+    parser.add_argument('--evaluation_method', type=str, required=True, choices=['pass_at_k', 'normal'],
+                        help='Evaluationsmethode: pass_at_k oder normal')
+    parser.add_argument('--max_count', type=int, required=True,
+                        help='Wert für n bei Pass@k, muss größer als k_value sein')
 
     args = parser.parse_args()
 
-    main(args.model_name, args.model_type, args.tokenizer_name, args.output_file, args.json_file)
+    main(args.model_name, args.model_type, args.output_file, args.evaluation_method, args.max_count)

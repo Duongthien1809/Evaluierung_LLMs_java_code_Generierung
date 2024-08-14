@@ -1,8 +1,11 @@
 .env
-Daten/LeetCode
+dataset/LeetCode
 reference_results.json
 test_results.json
 .idea
-Daten/.DS_Store
-test.py
+dataset/.DS_Store
+scripts/metricken/bias.py
 .DS_Store
+scripts/generate_code_old.py
+models
+tokenizers

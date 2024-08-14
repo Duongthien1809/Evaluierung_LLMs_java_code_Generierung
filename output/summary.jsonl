@@ -1,0 +1,18 @@
+{
+  "model_name": "gpt35",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.56,
+  "compilable_evaluation": 0.8,
+  "code_bleu_average_score": {
+    "bleu_score": 0.4003540530961833,
+    "ngram_match_score": 0.23970258847521764,
+    "weighted_ngram_match_score": 0.3271997883711004,
+    "syntax_match_score": 0.5755559569991819,
+    "dataflow_match_score": 0.4589578785392333
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8336946153640747,
+    "codeBert_average_recall": 0.7837279140949249,
+    "codeBert_average_f1": 0.8074888360500335
+  }
+}

@@ -10,7 +10,10 @@ def korrektheit_evaluate(code, test_code):
     results = []
 
     if not code or not test_code:
-        raise ValueError("Kein gültiger Code zum Ausführen gefunden.")
+        results.append({
+            "status": "failure",
+        })
+        return results
 
     # Verzeichnisse sicherstellen
     solution_dir = os.path.join("project", "src", "main", "java", "referenz")
@@ -54,8 +57,9 @@ def check_compilability(code):
 
     # Schreibe den generierten Code in die Maven-Projektdatei
     solution_file = os.path.join(solution_dir, "Solution.java")
-    with open(solution_file, 'w') as file:
-        file.write(code)
+    if solution_file:
+        with open(solution_file, 'w') as file:
+            file.write(code)
 
     # Führe den Maven-Bau-Befehl aus, um die Kompilierbarkeit zu überprüfen
     return_code, stdout, stderr = run_maven_build('compile')

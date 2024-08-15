@@ -1,7 +1,7 @@
 import json
 import os
 
-from scripts.daten_sammeln.prompts_sammeln import get_prompt_from_readme
+from scripts.daten_sammeln.prompts import get_prompt_from_readme
 from scripts.utils import find_files
 
 

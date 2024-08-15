@@ -1,56 +1,12 @@
 import math
+import time
 
+from scripts.daten_sammeln.chain_prompt import CoT, ToT, Few_shot, Zero_shot
 from scripts.generate_code import generate_code
 from scripts.metricken.codeBERT import evaluate_code_with_codeBert_score
 from scripts.metricken.code_bleu import code_bleu_score
 from scripts.metricken.korrektheit import korrektheit_evaluate, check_compilability
-from scripts.utils import insert_code_into_solution_frame
-
-
-def clean_generated_code(code):
-    """
-    Entfernt unerlaubte Zeichen wie Backticks aus dem generierten Code und
-    extrahiert den Inhalt zwischen den ersten Backticks, einschließlich der Klasse und
-    ihres Inhalts bis zur schließenden Klammer. Die Import-Anweisungen werden
-    beibehalten, falls vorhanden.
-    """
-    # Überprüfen, ob der Code zwischen Backticks steht
-    start_tick = code.find('```')
-    if start_tick != -1:
-        end_tick = code.find('```', start_tick + 3)
-        if end_tick != -1:
-            code = code[start_tick + 3:end_tick].strip()
-        else:
-            return ""
-
-    # Entfernen von unerlaubten Zeichen wie Backticks
-    code = code.replace('`', '')
-
-    # Finden des Startpunkts (Import oder Klassen-Definition)
-    start_index = code.find('import ')
-    if start_index == -1:
-        start_index = code.find('class ')
-    if start_index == -1:
-        return ""
-
-    code = code[start_index:]
-
-    # Erfassen des Codes bis zur schließenden Klammer der Klasse
-    open_braces = 0
-    end_index = -1
-    for i, char in enumerate(code):
-        if char == '{':
-            open_braces += 1
-        elif char == '}':
-            open_braces -= 1
-            if open_braces == 0:
-                end_index = i
-                break
-
-    if end_index == -1:
-        return ""
-
-    return code[:end_index + 1].strip()
+from scripts.utils import extract_generated_code
 
 
 def pass_at_k(n, c, k):
@@ -66,14 +22,14 @@ def evaluate_code_compilable(cleaned_code):
     """
     Bewertet den bereinigten Code anhand der Korrektheit Kompilierbar.
     """
-    return check_compilability(insert_code_into_solution_frame(cleaned_code))
+    return check_compilability(cleaned_code)
 
 
 def evaluate_code_correctness(cleaned_code, test_content):
     """
     Bewertet den bereinigten Code anhand der Korrektheit mit unittests.
     """
-    return korrektheit_evaluate(insert_code_into_solution_frame(cleaned_code), test_content)
+    return korrektheit_evaluate(cleaned_code, test_content)
 
 
 def evaluate_code_codeBert(cleaned_code, referenz_code):
@@ -81,18 +37,17 @@ def evaluate_code_codeBert(cleaned_code, referenz_code):
     Bewertet den bereinigten Code anhand der codeBert mit referenz code.
     """
     return evaluate_code_with_codeBert_score(referenz_code,
-                                             insert_code_into_solution_frame(cleaned_code))
+                                             cleaned_code)
 
 
 def evaluate_code_with_code_bleu(cleaned_code, code_content):
     """
     Bewertet den bereinigten Code mit der Code-BLEU-Metrik.
     """
-    return code_bleu_score(
-        insert_code_into_solution_frame(cleaned_code), code_content)
+    return code_bleu_score(cleaned_code, code_content)
 
 
-def run_pass_at_k_evaluation(task_id, model_name, model_type, prompt_content, test_content, max_value, k_value):
+def run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, test_content, max_value, k_value):
     """
     Führt die Pass@k-Evaluierung für n Durchläufe durch und gibt die Ergebnisse zurück.
     """
@@ -100,20 +55,27 @@ def run_pass_at_k_evaluation(task_id, model_name, model_type, prompt_content, te
     compiler_success_count = 0
 
     for i in range(max_value):
-        generated_code = generate_code(model_name, model_type, prompt_content)
-        cleaned_code = clean_generated_code(generated_code)
+        while True:
+            generated_code = generate_code(model_name, model_type, formatted_prompt)
+            print("generated code: ", generated_code)
+            extract_code = extract_generated_code(generated_code)
+            print("extracted_code: ", extract_code)
+            if extract_code is not None and extract_code != "":
+                break
+            time.sleep(2)  # Verzögerung von 2 Sekunden vor dem erneuten Versuch
 
-        if cleaned_code:
-            korrektheit_result = evaluate_code_correctness(cleaned_code, test_content)
-            compiler_result = evaluate_code_compilable(cleaned_code)
-            print("i: ", i)
-            if any(result.get("status") == "success" for result in korrektheit_result):
-                success_count += 1
-            print("  success_count: ", success_count)
+        korrektheit_result = evaluate_code_correctness(extract_code, test_content)
+        compiler_result = evaluate_code_compilable(extract_code)
+        print("i: ", i)
+        if any(result.get("status") == "success" for result in korrektheit_result):
+            success_count += 1
+        print("  success_count: ", success_count)
 
-            # Summiere die Compiler-Ergebnisse
-            if compiler_result:
-                compiler_success_count += 1
+        # Summiere die Compiler-Ergebnisse
+        if compiler_result:
+            compiler_success_count += 1
+
+        time.sleep(2)  # Verzögerung von 2 Sekunden pro Anfrage
 
     pass_k_value = pass_at_k(max_value, success_count, k_value)
     average_korrektheit_score = success_count / max_value
@@ -131,21 +93,15 @@ def run_pass_at_k_evaluation(task_id, model_name, model_type, prompt_content, te
     }
 
 
-def run_normal_evaluation(task_id, model_name, model_type, prompt_content, code_content, test_content):
+def run_normal_evaluation(task_id, model_name, model_type, generated_code, code_content, test_content):
     """
     Führt eine einzelne Evaluierung des generierten Codes durch und liefert die Ergebnisse.
     """
-    generated_code = generate_code(model_name, model_type, prompt_content)
-    print("generated code: ", generated_code)
-    cleaned_code = clean_generated_code(generated_code)
-    print("cleaned_code: ", cleaned_code)
 
-    if not cleaned_code:
-        return None
-    compiler_result = evaluate_code_compilable(cleaned_code)
-    korrektheit_result = evaluate_code_correctness(cleaned_code, test_content)
-    precision, recall, f1 = evaluate_code_codeBert(cleaned_code, code_content)
-    codebleu_score = evaluate_code_with_code_bleu(cleaned_code, code_content)
+    compiler_result = evaluate_code_compilable(generated_code)
+    korrektheit_result = evaluate_code_correctness(generated_code, test_content)
+    precision, recall, f1 = evaluate_code_codeBert(generated_code, code_content)
+    codebleu_score = evaluate_code_with_code_bleu(generated_code, code_content)
 
     status = "success" if any(result.get("status") == "success" for result in korrektheit_result) else "failure"
 
@@ -173,22 +129,41 @@ def process_evaluations(data, model_name, model_type, evaluation_method, max_cou
     success = 0
     results = []
     count = 0
-
     for entry in data:
         if count >= max_count:
             break
-
-        prompt = entry["prompt"]["problem"] + "\n" + entry["prompt"]["description"]
         task_id = entry.get("task_id")
         test_code = entry.get("test_code")
+        referenz_code = entry.get("referenz_code")
+        raw_prompt = entry.get("prompt")
+
+        formatted_prompt = CoT.format(
+            rahmen_code=raw_prompt['rahmen_code'],
+            prompt=raw_prompt['problem'] + "\nDescription: " + raw_prompt['description'],
+            sample=raw_prompt['sample_output']
+        )
+        print("prompt: ", formatted_prompt)
 
         if evaluation_method == "pass_at_k":
-            result = run_pass_at_k_evaluation(task_id, model_name, model_type, prompt, test_code, max_count, 1)
+            result = run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt,
+                                              test_code,
+                                              max_count, 1)
             print("count: ", count)
             return result, success
         elif evaluation_method == "normal":
-            referenz_code = entry.get("referenz_code")
-            result = run_normal_evaluation(task_id, model_name, model_type, prompt, referenz_code, test_code)
+            while True:
+                generated_code = generate_code(model_name, model_type, formatted_prompt)
+                print("generated code: ", generated_code)
+                extract_code = extract_generated_code(generated_code)
+                print("extracted_code: ", extract_code)
+                if extract_code is not None and extract_code != "":
+                    break
+                time.sleep(2)  # Verzögerung von 2 Sekunden vor dem erneuten Versuch
+
+            count += 1
+            result = run_normal_evaluation(task_id, model_name, model_type, extract_code,
+                                           referenz_code,
+                                           test_code)
             if result is not None:
                 if result.get("completion") == "success":
                     success += 1
@@ -199,8 +174,58 @@ def process_evaluations(data, model_name, model_type, evaluation_method, max_cou
                     "model_type": model_type,
                     "count": count + 1
                 })
-                results.append(result)
-                count += 1
-                print("count: ", count)
-
+            results.append(result)
+            print("count: ", count)
     return results, success
+
+
+def create_prompt(technik, raw_prompt):
+    """
+    Creates a formatted prompt based on the given technique and raw prompt data.
+    """
+    template_mapping = {
+        "CoT": CoT,
+        "ToT": ToT,
+        "Few_shot": Few_shot,
+        "Zero_shot": Zero_shot
+    }
+
+    prompt_template = template_mapping.get(technik)
+
+    if technik in ["CoT", "ToT", "Few_shot"]:
+        return prompt_template.format(
+            rahmen_code=raw_prompt['rahmen_code'],
+            prompt=raw_prompt['problem'] + "\nDescription: " + raw_prompt['description'],
+            sample=raw_prompt['sample_output']
+        )
+    elif technik == "Zero_shot":
+        return prompt_template.format(
+            rahmen_code=raw_prompt['rahmen_code'],
+            prompt=raw_prompt['problem'] + "\nDescription: " + raw_prompt['description']
+        )
+    else:
+        raise ValueError(f"Invalid prompt technique: {technik}")
+
+
+def evaluate_with_prompt_technik_code(evaluation_method, task_id, model_name, model_type, formatted_prompt, test_code,
+                                      referenz_code,
+                                      technik, count, max_count):
+    """
+    Evaluates the generated code based on the specified evaluation method.
+    """
+    if evaluation_method == "pass_at_k":
+        return run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, test_code, max_count, 1)
+    elif evaluation_method == "normal":
+        result = run_normal_evaluation(task_id, model_name, model_type, formatted_prompt, referenz_code, test_code)
+        if result:
+            result.update({
+                "task_id": task_id,
+                "model_name": model_name,
+                "model_type": model_type,
+                "prompt_technik": technik,
+                "count": count + 1
+            })
+            return result
+    else:
+        raise ValueError(f"Invalid evaluation method: {evaluation_method}")
+    return None

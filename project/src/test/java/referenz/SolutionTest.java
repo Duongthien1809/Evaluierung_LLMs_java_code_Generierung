@@ -8,18 +8,28 @@ import org.junit.jupiter.api.Test;
 
 class SolutionTest {
     @Test
-    void minSpeedOnTime() {
-        assertThat(new Solution().minSpeedOnTime(new int[] {1, 3, 2}, 6), equalTo(1));
+    void minWastedSpace() {
+        assertThat(
+                new Solution().minWastedSpace(new int[] {2, 3, 5}, new int[][] {{4, 8}, {2, 8}}),
+                equalTo(6));
     }
 
     @Test
-    void minSpeedOnTime2() {
-        assertThat(new Solution().minSpeedOnTime(new int[] {1, 3, 2}, 2.7), equalTo(3));
+    void minWastedSpace2() {
+        assertThat(
+                new Solution()
+                        .minWastedSpace(new int[] {2, 3, 5}, new int[][] {{1, 4}, {2, 3}, {3, 4}}),
+                equalTo(-1));
     }
 
     @Test
-    void minSpeedOnTime3() {
-        assertThat(new Solution().minSpeedOnTime(new int[] {1, 3, 2}, 1.9), equalTo(-1));
+    void minWastedSpace3() {
+        assertThat(
+                new Solution()
+                        .minWastedSpace(
+                                new int[] {3, 5, 8, 10, 11, 12},
+                                new int[][] {{12}, {11, 9}, {10, 5, 14}}),
+                equalTo(9));
     }
 }
 

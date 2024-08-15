@@ -7,5 +7,4 @@ dataset/.DS_Store
 scripts/metricken/bias.py
 .DS_Store
 scripts/generate_code_old.py
-models
-tokenizers
+hugging_face_login.py

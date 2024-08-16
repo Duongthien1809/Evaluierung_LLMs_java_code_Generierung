@@ -1,25 +1,33 @@
 package referenz;
 
-import java.util.Arrays;
-
+// #Medium #Array #Binary_Search #Binary_Search_II_Day_6
+// #2022_05_10_Time_86_ms_(88.58%)_Space_100.1_MB_(51.38%)
 public class Solution {
     public int minSpeedOnTime(int[] dist, double hour) {
-        int n = dist.length;
-        // check if it's possible to be on time with the slowest train
-        double minSpeed = (double)dist[n-1] / (hour - (n-1));
-        if (minSpeed > 10000000) return -1; // the answer exceeds the limit
-        // binary search for the minimum possible speed
-        int left = 1, right = 10000000;
-        while (left < right) {
-            int mid = (left + right) / 2; // current speed
-            double doubleTime = 0;
-            for (int i = 0; i < n-1; i++) {
-                doubleTime += Math.ceil((double)dist[i] / mid); // add travel time
+        int left = 1;
+        int right = 10000000; // Maximum possible speed
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            double timeTaken = calculateTime(dist, mid);
+
+            if (timeTaken <= hour) {
+                // If the current speed is possible, explore lower speeds
+                right = mid - 1;
+            } else { 
+                // Need a higher speed
+                left = mid + 1;
             }
-            doubleTime += (double)dist[n-1] / mid; // last train
-            if (doubleTime > hour) left = mid + 1; // need lower speed, move to left side
-            else right = mid; // speed of mid is possible, move to left side
         }
-        return left;
+
+        return left; 
+    }
+
+    private double calculateTime(int[] dist, int speed) {
+        double totalTime = 0;
+        for (int distance : dist) {
+            totalTime += Math.ceil((double) distance / speed); // ceil to account for waiting time
+        }
+        return totalTime;
     }
 }

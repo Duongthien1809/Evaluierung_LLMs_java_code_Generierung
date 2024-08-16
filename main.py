@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import threading
+import time
 
 from scripts.evaluation import process_evaluations
 from scripts.utils import save_results_as_jsonl, save_summary_as_jsonl
@@ -158,30 +159,30 @@ def run_evaluation_in_thread(model_name, model_type, output_file, evaluation_met
     return thread
 
 
-def generate_evaluations(technik, evaluate_method, model_name, model_type, k_value, output_file_format="output.jsonl"):
+def generate_evaluations(technik, k_value, output_file_format="output.jsonl"):
     """
     Generiert eine Liste von Evaluationskonfigurationen basierend auf der gegebenen Technik, der Evaluationsmethode,
     dem Modellnamen, dem k-Wert und dem Ausgabedateiformat.
     """
     model_configs = [
-        # {"model_name": "gpt35", "model_type": "openai", "max_count": 50},
-        {"model_name": "gemma2-9b-it", "max_count": 50},
-        # {"model_name": "gemma-7b-it", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama-guard-3-8b", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama3-70b-8192", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama3-8b-8192", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
-        # {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
-        # {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "max_count": 50},
+        {"model_name": "gpt35", "model_type": "openai", "max_count": 50},
+        {"model_name": "gemma2-9b-it", "model_type": "llama", "max_count": 50},
+        {"model_name": "gemma-7b-it", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama-guard-3-8b", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama3-70b-8192", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama3-8b-8192", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "max_count": 50},
         # Weitere Modelle hier hinzufügen
     ]
 
     evaluations = []
     for config in model_configs:
         evaluations.append({
-            "model_name": model_name,
-            "model_type": model_type,
+            "model_name": config["model_name"],
+            "model_type": config["model_type"],
             "output_file": output_file_format,
             "evaluation_method": "normal",
             "max_count": config["max_count"],
@@ -189,21 +190,40 @@ def generate_evaluations(technik, evaluate_method, model_name, model_type, k_val
             "k_value": k_value
         })
         evaluations.append({
-            "model_name": model_name,
-            "model_type": model_type,
+            "model_name": config["model_name"],
+            "model_type": config["model_type"],
             "output_file": output_file_format,
             "evaluation_method": "pass_at_k",
             "max_count": config["max_count"],
             "technik": technik,
             "k_value": k_value
         })
+        evaluations.append({
+            "model_name": config["model_name"],
+            "model_type": config["model_type"],
+            "output_file": output_file_format,
+            "evaluation_method": "pass_at_k",
+            "max_count": config["max_count"],
+            "technik": technik,
+            "k_value": k_value + 4
+        })
+        evaluations.append({
+            "model_name": config["model_name"],
+            "model_type": config["model_type"],
+            "output_file": output_file_format,
+            "evaluation_method": "pass_at_k",
+            "max_count": config["max_count"],
+            "technik": technik,
+            "k_value": k_value + 9
+        })
     return evaluations
 
 
 if __name__ == "__main__":
     # Set your arguments here
-    evaluations = generate_evaluations('CoT', "normal", "gpt35", "openai", 1, "output.jsonl")
-
+    evaluations = generate_evaluations('CoT', 1, "output.jsonl")
+    print(evaluations)
+    time.sleep(30)
     threads = []
     for eval_params in evaluations:
         thread = run_evaluation_in_thread(eval_params["model_name"], eval_params["model_type"],

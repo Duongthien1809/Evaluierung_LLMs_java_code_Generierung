@@ -1,0 +1,11 @@
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "n_runs": 50,
+  "successful_evaluations": 18,
+  "pass_at_k": 0.36,
+  "completion_score": 0.36,
+  "compilable_score": 0.96
+}

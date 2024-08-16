@@ -47,7 +47,8 @@ def evaluate_code_with_code_bleu(cleaned_code, code_content):
     return code_bleu_score(cleaned_code, code_content)
 
 
-def run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, test_content, max_value, k_value):
+def run_pass_at_k_evaluation(technik, task_id, model_name, model_type, formatted_prompt, test_content, max_value,
+                             k_value):
     """
     Führt die Pass@k-Evaluierung für n Durchläufe durch und gibt die Ergebnisse zurück.
     """
@@ -82,6 +83,7 @@ def run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, 
     average_compiler_score = compiler_success_count / max_value
 
     return {
+        "prompt_technik": technik,
         "task_id": task_id,
         "model_name": model_name,
         "model_type": model_type,
@@ -93,7 +95,7 @@ def run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, 
     }
 
 
-def run_normal_evaluation(task_id, model_name, model_type, generated_code, code_content, test_content):
+def run_normal_evaluation(technik, task_id, model_name, model_type, generated_code, code_content, test_content):
     """
     Führt eine einzelne Evaluierung des generierten Codes durch und liefert die Ergebnisse.
     """
@@ -106,6 +108,7 @@ def run_normal_evaluation(task_id, model_name, model_type, generated_code, code_
     status = "success" if any(result.get("status") == "success" for result in korrektheit_result) else "failure"
 
     return {
+        "prompt_technik": technik,
         "task_id": task_id,
         "model_name": model_name,
         "model_type": model_type,
@@ -122,7 +125,7 @@ def run_normal_evaluation(task_id, model_name, model_type, generated_code, code_
     }
 
 
-def process_evaluations(data, model_name, model_type, evaluation_method, max_count=150):
+def process_evaluations(data, model_name, model_type, evaluation_method, technik, k_value, max_count=150):
     """
     Iteriert über die Eingabedaten und führt die Evaluierungen durch.
     """
@@ -137,17 +140,13 @@ def process_evaluations(data, model_name, model_type, evaluation_method, max_cou
         referenz_code = entry.get("referenz_code")
         raw_prompt = entry.get("prompt")
 
-        formatted_prompt = CoT.format(
-            rahmen_code=raw_prompt['rahmen_code'],
-            prompt=raw_prompt['problem'] + "\nDescription: " + raw_prompt['description'],
-            sample=raw_prompt['sample_output']
-        )
+        formatted_prompt = create_prompt(technik, raw_prompt)
         print("prompt: ", formatted_prompt)
 
         if evaluation_method == "pass_at_k":
-            result = run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt,
+            result = run_pass_at_k_evaluation(technik, task_id, model_name, model_type, formatted_prompt,
                                               test_code,
-                                              max_count, 1)
+                                              max_count, k_value=k_value)
             print("count: ", count)
             return result, success
         elif evaluation_method == "normal":
@@ -161,7 +160,7 @@ def process_evaluations(data, model_name, model_type, evaluation_method, max_cou
                 time.sleep(2)  # Verzögerung von 2 Sekunden vor dem erneuten Versuch
 
             count += 1
-            result = run_normal_evaluation(task_id, model_name, model_type, extract_code,
+            result = run_normal_evaluation(technik, task_id, model_name, model_type, extract_code,
                                            referenz_code,
                                            test_code)
             if result is not None:
@@ -205,27 +204,3 @@ def create_prompt(technik, raw_prompt):
         )
     else:
         raise ValueError(f"Invalid prompt technique: {technik}")
-
-
-def evaluate_with_prompt_technik_code(evaluation_method, task_id, model_name, model_type, formatted_prompt, test_code,
-                                      referenz_code,
-                                      technik, count, max_count):
-    """
-    Evaluates the generated code based on the specified evaluation method.
-    """
-    if evaluation_method == "pass_at_k":
-        return run_pass_at_k_evaluation(task_id, model_name, model_type, formatted_prompt, test_code, max_count, 1)
-    elif evaluation_method == "normal":
-        result = run_normal_evaluation(task_id, model_name, model_type, formatted_prompt, referenz_code, test_code)
-        if result:
-            result.update({
-                "task_id": task_id,
-                "model_name": model_name,
-                "model_type": model_type,
-                "prompt_technik": technik,
-                "count": count + 1
-            })
-            return result
-    else:
-        raise ValueError(f"Invalid evaluation method: {evaluation_method}")
-    return None

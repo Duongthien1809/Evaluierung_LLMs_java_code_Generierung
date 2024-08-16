@@ -287,3 +287,22 @@
     "codeBert_average_f1": 0.7472466695308685
   }
 }
+{
+  "model_name": "llama-3.1-70b-versatile",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.1,
+  "compilable_evaluation": 0.46,
+  "code_bleu_average_score": {
+    "bleu_score": 0.36449042108047164,
+    "ngram_match_score": 0.1774166849128334,
+    "weighted_ngram_match_score": 0.2450879859935936,
+    "syntax_match_score": 0.4063548205191607,
+    "dataflow_match_score": 0.4291021928962989
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.7457153648138046,
+    "codeBert_average_recall": 0.6977224314212799,
+    "codeBert_average_f1": 0.718749715089798
+  }
+}
+

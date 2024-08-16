@@ -1,0 +1,171 @@
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama-guard-3-8b",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.0,
+  "compilable_evaluation": 0.16,
+  "code_bleu_average_score": {
+    "bleu_score": 0.2533333333333333,
+    "ngram_match_score": 0.0,
+    "weighted_ngram_match_score": 0.0,
+    "syntax_match_score": 0.013333333333333332,
+    "dataflow_match_score": 0.0
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.5082011383771896,
+    "codeBert_average_recall": 0.36171505093574524,
+    "codeBert_average_f1": 0.422111040353775
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "gemma-7b-it",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.02,
+  "compilable_evaluation": 0.22,
+  "code_bleu_average_score": {
+    "bleu_score": 0.2213867725729827,
+    "ngram_match_score": 0.008326436655230805,
+    "weighted_ngram_match_score": 0.01760747421259122,
+    "syntax_match_score": 0.05788110434720604,
+    "dataflow_match_score": 0.20173207507690263
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.5967109894752503,
+    "codeBert_average_recall": 0.4927599263191223,
+    "codeBert_average_f1": 0.5385539251565933
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama3-groq-8b-8192-tool-use-preview",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.08,
+  "compilable_evaluation": 0.16,
+  "code_bleu_average_score": {
+    "bleu_score": 0.37577727835302005,
+    "ngram_match_score": 0.19288672270605742,
+    "weighted_ngram_match_score": 0.31080605431016584,
+    "syntax_match_score": 0.49379515900014037,
+    "dataflow_match_score": 0.48562117739571675
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8048175346851348,
+    "codeBert_average_recall": 0.7354131138324738,
+    "codeBert_average_f1": 0.7679802644252777
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama-3.1-70b-versatile",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.0,
+  "compilable_evaluation": 0.2,
+  "code_bleu_average_score": {
+    "bleu_score": 0.2630968509433787,
+    "ngram_match_score": 0.03954381984242453,
+    "weighted_ngram_match_score": 0.08433567111251195,
+    "syntax_match_score": 0.12455591799385138,
+    "dataflow_match_score": 0.2639519948247271
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.6279973530769348,
+    "codeBert_average_recall": 0.5591863507032394,
+    "codeBert_average_f1": 0.5886429816484451
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "gemma2-9b-it",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.02,
+  "compilable_evaluation": 0.16,
+  "code_bleu_average_score": {
+    "bleu_score": 0.4033435965502016,
+    "ngram_match_score": 0.24520326944929288,
+    "weighted_ngram_match_score": 0.3183682406872888,
+    "syntax_match_score": 0.5714801120101086,
+    "dataflow_match_score": 0.4783227640541161
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8336890316009522,
+    "codeBert_average_recall": 0.8436273539066315,
+    "codeBert_average_f1": 0.8376737928390503
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.02,
+  "compilable_evaluation": 0.22,
+  "code_bleu_average_score": {
+    "bleu_score": 0.3225397848427303,
+    "ngram_match_score": 0.14605734852792807,
+    "weighted_ngram_match_score": 0.19018904754941066,
+    "syntax_match_score": 0.3685348354010038,
+    "dataflow_match_score": 0.265377907892579
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.7805254948139191,
+    "codeBert_average_recall": 0.7459236466884613,
+    "codeBert_average_f1": 0.7607421290874481
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama3-70b-8192",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.02,
+  "compilable_evaluation": 0.2,
+  "code_bleu_average_score": {
+    "bleu_score": 0.26123791884812064,
+    "ngram_match_score": 0.060244935555322676,
+    "weighted_ngram_match_score": 0.09825770743673604,
+    "syntax_match_score": 0.17637637774456585,
+    "dataflow_match_score": 0.4100726546558581
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.6903669840097427,
+    "codeBert_average_recall": 0.6103531861305237,
+    "codeBert_average_f1": 0.6466545301675797
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "gpt35",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.04,
+  "compilable_evaluation": 0.28,
+  "code_bleu_average_score": {
+    "bleu_score": 0.40100224936017154,
+    "ngram_match_score": 0.24233272151750776,
+    "weighted_ngram_match_score": 0.3133736944276371,
+    "syntax_match_score": 0.5797577482044555,
+    "dataflow_match_score": 0.4685448332910858
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8168741405010224,
+    "codeBert_average_recall": 0.788734667301178,
+    "codeBert_average_f1": 0.8019426572322845
+  }
+}
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "llama3-8b-8192",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.02,
+  "compilable_evaluation": 0.22,
+  "code_bleu_average_score": {
+    "bleu_score": 0.25694491460780106,
+    "ngram_match_score": 0.04809046009826373,
+    "weighted_ngram_match_score": 0.07483396074081292,
+    "syntax_match_score": 0.13220305482073869,
+    "dataflow_match_score": 0.33265218277138886
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.6594183421134949,
+    "codeBert_average_recall": 0.5841953659057617,
+    "codeBert_average_f1": 0.6183586668968201
+  }
+}

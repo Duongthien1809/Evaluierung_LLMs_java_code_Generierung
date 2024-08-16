@@ -1,0 +1,88 @@
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama-guard-3-8b",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 1,
+  "pass_at_k": 0.19999999999999996,
+  "completion_score": 0.02,
+  "compilable_score": 0.22
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama3-groq-8b-8192-tool-use-preview",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 2,
+  "pass_at_k": 0.363265306122449,
+  "completion_score": 0.04,
+  "compilable_score": 0.2
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "gemma-7b-it",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 3,
+  "pass_at_k": 0.4959183673469387,
+  "completion_score": 0.06,
+  "compilable_score": 0.24
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "gemma2-9b-it",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 0,
+  "pass_at_k": 0.0,
+  "completion_score": 0.0,
+  "compilable_score": 0.2
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 1,
+  "pass_at_k": 0.19999999999999996,
+  "completion_score": 0.02,
+  "compilable_score": 0.36
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "n_runs": 50,
+  "successful_evaluations": 1,
+  "pass_at_k": 0.19999999999999996,
+  "completion_score": 0.02,
+  "compilable_score": 0.14
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 0,
+  "pass_at_k": 0.0,
+  "completion_score": 0.0,
+  "compilable_score": 0.28
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "n_runs": 50,
+  "successful_evaluations": 1,
+  "pass_at_k": 0.19999999999999996,
+  "completion_score": 0.02,
+  "compilable_score": 0.24
+}

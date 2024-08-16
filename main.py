@@ -13,7 +13,7 @@ def calculate_average(scores):
     return sum(scores) / len(scores) if scores else 0
 
 
-def summarize_results(results, count, success, evaluation_method, model_name):
+def summarize_results(results, count, success, evaluation_method, model_name, technik):
     """
     Fasst die Ergebnisse der Evaluierung zusammen.
     Berechnet den durchschnittlichen Pass@k-Wert oder die durchschnittlichen Scores, je nach Evaluierungsmethode.
@@ -40,6 +40,7 @@ def summarize_results(results, count, success, evaluation_method, model_name):
         dataflow_match_scores = [result.get("dataflow_match_score", 0) for result in codeBleu_scores]
 
         summary = {
+            "prompt_technik": technik,
             "model_name": model_name,
             "total_evaluated": count,
             "completion_evaluation": round(success_rate, 4),
@@ -88,13 +89,13 @@ def load_leetcode_dataset():
     return data
 
 
-def main(model_name, model_type, output_file, evaluation_method, max_count):
+def main(model_name, model_type, output_file, evaluation_method, max_count, technik, k_value):
     # Load data from the improperly formatted JSON file
     data = load_leetcode_dataset()
 
     # Proceed with evaluation
     results, success = process_evaluations(data, model_name, model_type,
-                                           evaluation_method, max_count=max_count)
+                                           evaluation_method, technik, k_value, max_count=max_count)
 
     # results_with_prompt = process_evaluations_for_prompts(data, model_name, model_type, evaluation_method,
     #                                                       max_count=max_count,
@@ -102,14 +103,15 @@ def main(model_name, model_type, output_file, evaluation_method, max_count):
     #                                                                                           model_name))
 
     # Summarize results
-    results, summary = summarize_results(results, max_count, success, evaluation_method, model_name)
+    results, summary = summarize_results(results, max_count, success, evaluation_method, model_name, technik)
     # Ensure directories exist
 
     if evaluation_method == "pass_at_k":
-        summary_file = "./output/pass@ksum.jsonl"
+        summary_file = (f"./output/passK/{technik}_pass@{k_value}"
+                        ".jsonl")
     else:
-        save_results_as_jsonl(results, ensure_directory_exists(output_file, model_name))
-        summary_file = "./output/summary.jsonl"
+        save_results_as_jsonl(results, ensure_directory_exists(f"{technik}_{output_file}", model_name))
+        summary_file = f"./output/sum/{technik}_summary.jsonl"
 
     # Save results and summary
     save_summary_as_jsonl(summary, summary_file)
@@ -126,10 +128,14 @@ def start_with_terminal():
                         help='Evaluationsmethode: pass_at_k oder normal')
     parser.add_argument('--max_count', type=int, required=True,
                         help='Wert für n bei Pass@k, muss größer als k_value sein')
+    parser.add_argument('--technik', type=str, required=True, choices=['CoT', 'ToT', 'Zero_shot', 'Few_shot'],
+                        help='technik of prompt')
+    parser.add_argument('--k_value', type=str, help='value of k')
 
     args = parser.parse_args()
 
-    main(args.model_name, args.model_type, args.output_file, args.evaluation_method, args.max_count)
+    main(args.model_name, args.model_type, args.output_file, args.evaluation_method, args.max_count, args.technik,
+         args.k_value)
 
 
 # if __name__ == "__main__":
@@ -139,74 +145,70 @@ def start_with_terminal():
 #     output_file = "output.jsonl"
 #     evaluation_method = "normal"  # oder 'pass_at_k'
 #     max_count = 50
-#
-#     main(model_name, model_type, output_file, evaluation_method, max_count)
-def run_evaluation_in_thread(model_name, model_type, output_file, evaluation_method, max_count):
-    thread = threading.Thread(target=main, args=(model_name, model_type, output_file, evaluation_method, max_count))
+#     k_value = 1
+#     technik = "CoT"
+#     main(model_name, model_type, output_file, evaluation_method, max_count, technik, k_value=k_value)
+
+
+def run_evaluation_in_thread(model_name, model_type, output_file, evaluation_method, max_count, technik, k_value):
+    thread = threading.Thread(target=main,
+                              args=(
+                                  model_name, model_type, output_file, evaluation_method, max_count, technik, k_value))
     thread.start()
     return thread
 
 
-if __name__ == "__main__":
-    # Set your arguments here
-    evaluations = [
-        {"model_name": "gpt35", "model_type": "openai", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "gpt35", "model_type": "openai", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "gemma2-9b-it", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "gemma2-9b-it", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "gemma-7b-it", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "gemma-7b-it", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-        {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-
-        {"model_name": "llama-guard-3-8b", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "llama-guard-3-8b", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "llama3-70b-8192", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "llama3-70b-8192", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "llama3-8b-8192", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "llama3-8b-8192", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
-
-        {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "normal", "max_count": 50},
-        {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "output_file": "output.jsonl",
-         "evaluation_method": "pass_at_k", "max_count": 50},
+def generate_evaluations(technik, evaluate_method, model_name, model_type, k_value, output_file_format="output.jsonl"):
+    """
+    Generiert eine Liste von Evaluationskonfigurationen basierend auf der gegebenen Technik, der Evaluationsmethode,
+    dem Modellnamen, dem k-Wert und dem Ausgabedateiformat.
+    """
+    model_configs = [
+        # {"model_name": "gpt35", "model_type": "openai", "max_count": 50},
+        {"model_name": "gemma2-9b-it", "max_count": 50},
+        # {"model_name": "gemma-7b-it", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama-guard-3-8b", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-70b-8192", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-8b-8192", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        # {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "max_count": 50},
         # Weitere Modelle hier hinzufügen
     ]
+
+    evaluations = []
+    for config in model_configs:
+        evaluations.append({
+            "model_name": model_name,
+            "model_type": model_type,
+            "output_file": output_file_format,
+            "evaluation_method": "normal",
+            "max_count": config["max_count"],
+            "technik": technik,
+            "k_value": k_value
+        })
+        evaluations.append({
+            "model_name": model_name,
+            "model_type": model_type,
+            "output_file": output_file_format,
+            "evaluation_method": "pass_at_k",
+            "max_count": config["max_count"],
+            "technik": technik,
+            "k_value": k_value
+        })
+    return evaluations
+
+
+if __name__ == "__main__":
+    # Set your arguments here
+    evaluations = generate_evaluations('CoT', "normal", "gpt35", "openai", 1, "output.jsonl")
 
     threads = []
     for eval_params in evaluations:
         thread = run_evaluation_in_thread(eval_params["model_name"], eval_params["model_type"],
                                           eval_params["output_file"], eval_params["evaluation_method"],
-                                          eval_params["max_count"])
+                                          eval_params["max_count"], eval_params["technik"], eval_params["k_value"])
         threads.append(thread)
 
     # Warten, bis alle Threads abgeschlossen sind

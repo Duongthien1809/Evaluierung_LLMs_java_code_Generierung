@@ -1,6 +1,8 @@
 import json
+import platform
 import re
 import subprocess
+import sys
 
 
 def extract_class_body(generated_code):
@@ -9,9 +11,6 @@ def extract_class_body(generated_code):
     einschließlich der Import-Anweisungen, aber ohne die
     Klassendeklaration und geschweifte Klammern. Die Package-Anweisungen
     werden entfernt.
-
-    :param generated_code: Der generierte Code als String.
-    :return: Der Inhalt der Klasse als String, einschließlich der Import-Anweisungen.
     """
     # Zerlege den Code in Zeilen
     lines = generated_code.split('\n')
@@ -61,17 +60,6 @@ def save_results_as_jsonl(results, output_file):
 def save_summary_as_jsonl(summary, output_file):
     with open(output_file, 'a') as file:
         file.write(json.dumps(summary) + '\n')
-
-
-def run_maven_build(command):
-    project_directory = '/Users/td/Desktop/Private/BA/project/evalLLMForJavaGenerierung/project'
-    result = subprocess.run(
-        ['mvn', 'clean', command],
-        cwd=project_directory,  # Verzeichnis, in dem das Maven-Kommando ausgeführt wird
-        capture_output=True,
-        text=True
-    )
-    return result.returncode, result.stdout, result.stderr
 
 
 def extract_rahmen_code(code: str) -> str:
@@ -168,3 +156,48 @@ def extract_generated_code(text):
         code_block = code_block[:last_brace_index + 1]
 
     return code_block.strip()
+
+
+def check_maven_installed():
+    """Check if Maven is installed by running 'mvn -v'. Return True if installed, False otherwise."""
+    try:
+        subprocess.run(['mvn', '-v'], check=True, capture_output=True, text=True)
+        return True
+    except FileNotFoundError:
+        return False
+
+
+def install_maven():
+    """Install Maven depending on the operating system."""
+    os_type = platform.system()
+
+    if os_type == 'Linux':
+        print("Installing Maven on Linux...")
+        subprocess.run(['sudo', 'apt-get', 'install', '-y', 'mvn'], check=True)
+    elif os_type == 'Darwin':  # MacOS
+        print("Installing Maven on MacOS...")
+        subprocess.run(['brew', 'install', 'mvn'], check=True)
+    elif os_type == 'Windows':
+        print("Please install Maven manually from https://maven.apache.org/download.cgi")
+        sys.exit(1)
+    else:
+        raise Exception("Unsupported OS for automatic Maven installation.")
+
+
+def run_maven_build(command):
+    project_directory = './project'
+
+    # Check if Maven is installed
+    if not check_maven_installed():
+        print("Maven not found. Installing Maven...")
+        install_maven()
+
+    # Proceed with running the Maven command
+    result = subprocess.run(
+        ['mvn', 'clean', command],
+        cwd=project_directory,  # Directory to run Maven command in
+        capture_output=True,
+        text=True
+    )
+
+    return result.returncode, result.stdout, result.stderr

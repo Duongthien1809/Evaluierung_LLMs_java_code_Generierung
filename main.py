@@ -223,7 +223,6 @@ if __name__ == "__main__":
     # Set your arguments here
     evaluations = generate_evaluations('CoT', 1, "output.jsonl")
     print(evaluations)
-    time.sleep(30)
     threads = []
     for eval_params in evaluations:
         thread = run_evaluation_in_thread(eval_params["model_name"], eval_params["model_type"],

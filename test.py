@@ -1,52 +1,58 @@
-# [
-#         {"model_name": "gpt35", "model_type": "openai", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "gpt35", "model_type": "openai", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "gemma2-9b-it", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "gemma2-9b-it", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "gemma-7b-it", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "gemma-7b-it", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama-guard-3-8b", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama-guard-3-8b", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama3-70b-8192", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama3-70b-8192", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama3-8b-8192", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama3-8b-8192", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#
-#         {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "normal", "max_count": 50, "technik": "ToT"},
-#         {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "output_file": "output.jsonl",
-#          "evaluation_method": "pass_at_k", "max_count": 50, "technik": "ToT"},
-#         # Weitere Modelle hier hinzufügen
-#     ]
+import platform
+import subprocess
+import sys
+
+
+def check_maven_installed():
+    """Check if Maven is installed by running 'mvn -v'. Return True if installed, False otherwise."""
+    try:
+        subprocess.run(['mvn', '-v'], check=True, capture_output=True, text=True)
+        return True
+    except FileNotFoundError:
+        return False
+
+
+def install_maven():
+    """Install Maven depending on the operating system."""
+    os_type = platform.system()
+
+    if os_type == 'Linux':
+        print("Installing Maven on Linux...")
+        subprocess.run(['sudo', 'apt-get', 'install', '-y', 'maven'], check=True)
+    elif os_type == 'Darwin':  # MacOS
+        print("Installing Maven on MacOS...")
+        subprocess.run(['brew', 'install', 'maven'], check=True)
+    elif os_type == 'Windows':
+        print("Please install Maven manually from https://maven.apache.org/download.cgi")
+        sys.exit(1)
+    else:
+        raise Exception("Unsupported OS for automatic Maven installation.")
+
+
+def run_maven_build(command):
+    project_directory = './project'
+
+    # Check if Maven is installed
+    if not check_maven_installed():
+        print("Maven not found. Installing Maven...")
+        install_maven()
+
+    # Proceed with running the Maven command
+    result = subprocess.run(
+        ['mvn', 'clean', command],
+        cwd=project_directory,  # Directory to run Maven command in
+        capture_output=True,
+        text=True
+    )
+
+    return result.returncode, result.stdout, result.stderr
+
+
+# Example usage:
+if __name__ == "__main__":
+    returncode, stdout, stderr = run_maven_build('install')
+    print(f"Return Code: {returncode}")
+    print("Output:")
+    print(stdout)
+    print("Errors:")
+    print(stderr)

@@ -36,3 +36,8 @@ Die Ergebnisse, die du von CodeBERTScore erhalten hast, dienen dazu, die Qualit�
 - **codebleu (CodeBLEU-Score)**:
     - **Beschreibung**: Der CodeBLEU-Score ist eine angepasste Version des BLEU-Scores, die speziell für die Bewertung von generiertem Programmcode entwickelt wurde. Während der klassische BLEU-Score nur die Übereinstimmung von n-Grammen zwischen Referenz- und Zieltexten misst, berücksichtigt der CodeBLEU-Score zusätzlich sprachspezifische Merkmale wie Syntax und Datenfluss.
     - **Zweck**: Dieser Score dient dazu, die Ähnlichkeit zwischen dem generierten Code und dem Referenzcode zu bewerten, wobei sowohl die Struktur als auch die Semantik des Codes berücksichtigt werden.
+ 
+
+
+  **Hinsweis**
+  im root folder von paperplot erhalten noch merge daten von pass@k udn normals unter den Namen pass@1_output.csv und normals_output.csv.

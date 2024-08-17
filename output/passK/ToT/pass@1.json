@@ -1,0 +1,112 @@
+[
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "gpt35",
+    "model_type": "openai",
+    "n_runs": 50,
+    "successful_evaluations": 23,
+    "pass_at_k": 0.45999999999999996,
+    "completion_score": 0.46,
+    "compilable_score": 0.62
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "llama-guard-3-8b",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 9,
+    "pass_at_k": 0.18000000000000005,
+    "completion_score": 0.18,
+    "compilable_score": 0.6
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "llama3-groq-8b-8192-tool-use-preview",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 6,
+    "pass_at_k": 0.12,
+    "completion_score": 0.12,
+    "compilable_score": 0.4
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "llama3-8b-8192",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 7,
+    "pass_at_k": 0.14,
+    "completion_score": 0.14,
+    "compilable_score": 0.5
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "gemma-7b-it",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 1,
+    "pass_at_k": 0.020000000000000018,
+    "completion_score": 0.02,
+    "compilable_score": 0.42
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "llama3-groq-70b-8192-tool-use-preview",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 4,
+    "pass_at_k": 0.07999999999999996,
+    "completion_score": 0.08,
+    "compilable_score": 0.54
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "gemma2-9b-it",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 6,
+    "pass_at_k": 0.12,
+    "completion_score": 0.12,
+    "compilable_score": 0.48
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "llama-3.1-70b-versatile",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 7,
+    "pass_at_k": 0.14,
+    "completion_score": 0.14,
+    "compilable_score": 0.6
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "mixtral-8x7b-32768",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 2,
+    "pass_at_k": 0.040000000000000036,
+    "completion_score": 0.04,
+    "compilable_score": 0.6
+  },
+  {
+    "prompt_technik": "ToT",
+    "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+    "model_name": "gemma2-9b-it",
+    "model_type": "llama",
+    "n_runs": 50,
+    "successful_evaluations": 0,
+    "pass_at_k": 0.0,
+    "completion_score": 0.0,
+    "compilable_score": 0.98
+  }
+]

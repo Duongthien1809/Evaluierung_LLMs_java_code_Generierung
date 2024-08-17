@@ -1,0 +1,19 @@
+{
+  "prompt_technik": "Zero_shot",
+  "model_name": "gemma2-9b-it",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.36,
+  "compilable_evaluation": 0.9,
+  "code_bleu_average_score": {
+    "bleu_score": 0.42398999307749413,
+    "ngram_match_score": 0.27885424868594066,
+    "weighted_ngram_match_score": 0.36911964834103395,
+    "syntax_match_score": 0.5665969601024387,
+    "dataflow_match_score": 0.4813891151805634
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8530058646202088,
+    "codeBert_average_recall": 0.83566725730896,
+    "codeBert_average_f1": 0.8434679853916168
+  }
+}

@@ -8,4 +8,4 @@ scripts/metricken/bias.py
 .DS_Store
 scripts/generate_code_old.py
 hugging_face_login.py
-test.py
+paperplot/convert_json_csv.py

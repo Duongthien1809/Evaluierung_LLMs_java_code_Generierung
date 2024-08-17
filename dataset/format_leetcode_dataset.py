@@ -1,7 +1,7 @@
 import json
 
 from scripts.daten_sammeln.prompts import format_problem_statement
-from scripts.utils import insert_code_into_solution_frame, insert_test_code_into_solution_test_frame
+from scripts.utils import insert_code_into_solution_frame_for_load_dataset, insert_test_code_into_solution_test_frame
 
 
 def format_leetcode_dataset(json_file):
@@ -33,8 +33,8 @@ def format_leetcode_dataset(json_file):
                         # Speichern der Daten in der JSONL-Datei
                         json_line = json.dumps({
                             "task_id": short_directory,
-                            "prompt": format_problem_statement(prompt_content, test_content, insert_code_into_solution_frame(code_content)),
-                            "referenz_code": insert_code_into_solution_frame(code_content),
+                            "prompt": format_problem_statement(prompt_content, test_content, insert_code_into_solution_frame_for_load_dataset(code_content)),
+                            "referenz_code": insert_code_into_solution_frame_for_load_dataset(code_content),
                             "test_code": insert_test_code_into_solution_test_frame(test_content)
                         })
                         file.write(json_line + '\n')

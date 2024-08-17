@@ -1,0 +1,1050 @@
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.43060984811070113,
+    "ngram_match_score": 0.21880334729777365,
+    "weighted_ngram_match_score": 0.4482036726394877,
+    "syntax_match_score": 0.6463414634146342,
+    "dataflow_match_score": 0.4090909090909091
+  },
+  "codeBert": {
+    "precision": 0.8507020473480225,
+    "recall": 0.7573748230934143,
+    "f1": 0.8013303279876709
+  },
+  "count": 1
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1819_number_of_different_subsequences_gcds",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.313615549259699,
+    "ngram_match_score": 0.23477314556936602,
+    "weighted_ngram_match_score": 0.31227766586255556,
+    "syntax_match_score": 0.4421052631578947,
+    "dataflow_match_score": 0.2653061224489796
+  },
+  "codeBert": {
+    "precision": 0.8013744354248047,
+    "recall": 0.7735298871994019,
+    "f1": 0.7872059941291809
+  },
+  "count": 2
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1897_redistribute_characters_to_make_all_strings_equal",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4037336646479085,
+    "ngram_match_score": 0.4916759832823042,
+    "weighted_ngram_match_score": 0.5019420608892672,
+    "syntax_match_score": 0.34545454545454546,
+    "dataflow_match_score": 0.27586206896551724
+  },
+  "codeBert": {
+    "precision": 0.835063636302948,
+    "recall": 0.813683032989502,
+    "f1": 0.824234664440155
+  },
+  "count": 3
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1848_minimum_distance_to_the_target_element",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.585480843270404,
+    "ngram_match_score": 0.48812436584630287,
+    "weighted_ngram_match_score": 0.624702017268758,
+    "syntax_match_score": 0.6521739130434783,
+    "dataflow_match_score": 0.5769230769230769
+  },
+  "codeBert": {
+    "precision": 0.9069320559501648,
+    "recall": 0.826255202293396,
+    "f1": 0.8647159934043884
+  },
+  "count": 4
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1801_number_of_orders_in_the_backlog",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3946052384221312,
+    "ngram_match_score": 0.2871737003516193,
+    "weighted_ngram_match_score": 0.297861009950662,
+    "syntax_match_score": 0.5648148148148148,
+    "dataflow_match_score": 0.42857142857142855
+  },
+  "codeBert": {
+    "precision": 0.8430534601211548,
+    "recall": 0.8076464533805847,
+    "f1": 0.8249702453613281
+  },
+  "count": 5
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1887_reduction_operations_to_make_the_array_elements_equal",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.22910255909457533,
+    "ngram_match_score": 0.19866354521180915,
+    "weighted_ngram_match_score": 0.21460203707844194,
+    "syntax_match_score": 0.3333333333333333,
+    "dataflow_match_score": 0.16981132075471697
+  },
+  "codeBert": {
+    "precision": 0.7629539966583252,
+    "recall": 0.7842029333114624,
+    "f1": 0.7734325528144836
+  },
+  "count": 6
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1896_minimum_cost_to_change_the_final_value_of_expression",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.1433554769739257,
+    "ngram_match_score": 0.0005588555777284823,
+    "weighted_ngram_match_score": 0.0013530808080028536,
+    "syntax_match_score": 0.4074074074074074,
+    "dataflow_match_score": 0.1641025641025641
+  },
+  "codeBert": {
+    "precision": 0.6940310597419739,
+    "recall": 0.7017905712127686,
+    "f1": 0.6978892683982849
+  },
+  "count": 7
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1856_maximum_subarray_min_product",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3779275287381945,
+    "ngram_match_score": 0.2501961264303038,
+    "weighted_ngram_match_score": 0.358755367832819,
+    "syntax_match_score": 0.4827586206896552,
+    "dataflow_match_score": 0.42
+  },
+  "codeBert": {
+    "precision": 0.8143994808197021,
+    "recall": 0.8202304840087891,
+    "f1": 0.8173045516014099
+  },
+  "count": 8
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1877_minimize_maximum_pair_sum_in_array",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4667751570499652,
+    "ngram_match_score": 0.29321077646843374,
+    "weighted_ngram_match_score": 0.35450209662938614,
+    "syntax_match_score": 0.6122448979591837,
+    "dataflow_match_score": 0.6071428571428571
+  },
+  "codeBert": {
+    "precision": 0.8448235988616943,
+    "recall": 0.7832015752792358,
+    "f1": 0.8128463625907898
+  },
+  "count": 9
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1850_minimum_adjacent_swaps_to_reach_the_kth_smallest_number",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3367605071067208,
+    "ngram_match_score": 0.176051676374783,
+    "weighted_ngram_match_score": 0.20748004371420567,
+    "syntax_match_score": 0.7566137566137566,
+    "dataflow_match_score": 0.20689655172413793
+  },
+  "codeBert": {
+    "precision": 0.8151540756225586,
+    "recall": 0.8321621417999268,
+    "f1": 0.8235703110694885
+  },
+  "count": 10
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1846_maximum_element_after_decreasing_and_rearranging",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2781580625580078,
+    "ngram_match_score": 0.11303483187640316,
+    "weighted_ngram_match_score": 0.14633654879041066,
+    "syntax_match_score": 0.4782608695652174,
+    "dataflow_match_score": 0.375
+  },
+  "codeBert": {
+    "precision": 0.7657623291015625,
+    "recall": 0.7893141508102417,
+    "f1": 0.7773599028587341
+  },
+  "count": 11
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1813_sentence_similarity_iii",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.43855371059468795,
+    "ngram_match_score": 0.2933519647075525,
+    "weighted_ngram_match_score": 0.30213271894104066,
+    "syntax_match_score": 0.49206349206349204,
+    "dataflow_match_score": 0.6666666666666666
+  },
+  "codeBert": {
+    "precision": 0.8137668967247009,
+    "recall": 0.7909038662910461,
+    "f1": 0.8021724820137024
+  },
+  "count": 12
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1822_sign_of_the_product_of_an_array",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.33549905149324183,
+    "ngram_match_score": 0.32374305978040974,
+    "weighted_ngram_match_score": 0.43167305961247115,
+    "syntax_match_score": 0.5151515151515151,
+    "dataflow_match_score": 0.07142857142857142
+  },
+  "codeBert": {
+    "precision": 0.7424755692481995,
+    "recall": 0.8057808876037598,
+    "f1": 0.772834062576294
+  },
+  "count": 13
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1900_the_earliest_and_latest_rounds_where_players_compete",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.07634437657798523,
+    "ngram_match_score": 0.026384281484803693,
+    "weighted_ngram_match_score": 0.03255020879362575,
+    "syntax_match_score": 0.02717391304347826,
+    "dataflow_match_score": 0.21926910299003322
+  },
+  "codeBert": {
+    "precision": 0.7319959402084351,
+    "recall": 0.745806872844696,
+    "f1": 0.7388368844985962
+  },
+  "count": 14
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1830_minimum_number_of_operations_to_make_string_sorted",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.37324512435435986,
+    "ngram_match_score": 0.29493597636476543,
+    "weighted_ngram_match_score": 0.3969642329758536,
+    "syntax_match_score": 0.6380368098159509,
+    "dataflow_match_score": 0.16304347826086957
+  },
+  "codeBert": {
+    "precision": 0.8413931727409363,
+    "recall": 0.8036483526229858,
+    "f1": 0.8220877647399902
+  },
+  "count": 15
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1888_minimum_number_of_flips_to_make_the_binary_string_alternating",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3304965613993534,
+    "ngram_match_score": 0.19587971345083052,
+    "weighted_ngram_match_score": 0.31047896856988105,
+    "syntax_match_score": 0.532608695652174,
+    "dataflow_match_score": 0.2830188679245283
+  },
+  "codeBert": {
+    "precision": 0.811669111251831,
+    "recall": 0.7796161770820618,
+    "f1": 0.7953198552131653
+  },
+  "count": 16
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1817_finding_the_users_active_minutes",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.14566736201640906,
+    "ngram_match_score": 0.03176621696773846,
+    "weighted_ngram_match_score": 0.06743866416876389,
+    "syntax_match_score": 0.28346456692913385,
+    "dataflow_match_score": 0.2
+  },
+  "codeBert": {
+    "precision": 0.7273266911506653,
+    "recall": 0.7729279398918152,
+    "f1": 0.749434232711792
+  },
+  "count": 17
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1866_number_of_ways_to_rearrange_sticks_with_k_sticks_visible",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.37798431443984964,
+    "ngram_match_score": 0.2915708606756654,
+    "weighted_ngram_match_score": 0.4107625555471186,
+    "syntax_match_score": 0.5647058823529412,
+    "dataflow_match_score": 0.24489795918367346
+  },
+  "codeBert": {
+    "precision": 0.8556917905807495,
+    "recall": 0.7901413440704346,
+    "f1": 0.821611225605011
+  },
+  "count": 18
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1837_sum_of_digits_in_base_k",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.12474215375339036,
+    "ngram_match_score": 0.011913356192402587,
+    "weighted_ngram_match_score": 0.09290948284666242,
+    "syntax_match_score": 0.23880597014925373,
+    "dataflow_match_score": 0.1553398058252427
+  },
+  "codeBert": {
+    "precision": 0.6881104707717896,
+    "recall": 0.7632368803024292,
+    "f1": 0.7237293124198914
+  },
+  "count": 19
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1864_minimum_number_of_swaps_to_make_the_binary_string_alternating",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3028078007924997,
+    "ngram_match_score": 0.16597792755364868,
+    "weighted_ngram_match_score": 0.1775987022898298,
+    "syntax_match_score": 0.44660194174757284,
+    "dataflow_match_score": 0.42105263157894735
+  },
+  "codeBert": {
+    "precision": 0.7615164518356323,
+    "recall": 0.7552903294563293,
+    "f1": 0.7583905458450317
+  },
+  "count": 20
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1847_closest_room",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.36531222095407917,
+    "ngram_match_score": 0.19493737495433514,
+    "weighted_ngram_match_score": 0.20676298784485644,
+    "syntax_match_score": 0.5914634146341463,
+    "dataflow_match_score": 0.46808510638297873
+  },
+  "codeBert": {
+    "precision": 0.7911749482154846,
+    "recall": 0.7810725569725037,
+    "f1": 0.7860913276672363
+  },
+  "count": 21
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1816_truncate_sentence",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.8039034695338165,
+    "ngram_match_score": 0.5853975225195773,
+    "weighted_ngram_match_score": 0.8353445607438942,
+    "syntax_match_score": 0.7948717948717948,
+    "dataflow_match_score": 1.0
+  },
+  "codeBert": {
+    "precision": 0.8988937139511108,
+    "recall": 0.7909404039382935,
+    "f1": 0.8414688110351562
+  },
+  "count": 22
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1869_longer_contiguous_segments_of_ones_than_zeros",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2738147410570151,
+    "ngram_match_score": 0.14517770818662912,
+    "weighted_ngram_match_score": 0.1549113097086942,
+    "syntax_match_score": 0.37209302325581395,
+    "dataflow_match_score": 0.4230769230769231
+  },
+  "codeBert": {
+    "precision": 0.7759775519371033,
+    "recall": 0.7632874250411987,
+    "f1": 0.7695802450180054
+  },
+  "count": 23
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1814_count_nice_pairs_in_an_array",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.40267858351128955,
+    "ngram_match_score": 0.22100280621112076,
+    "weighted_ngram_match_score": 0.23603187415438365,
+    "syntax_match_score": 0.7012987012987013,
+    "dataflow_match_score": 0.4523809523809524
+  },
+  "codeBert": {
+    "precision": 0.8017169237136841,
+    "recall": 0.7947893738746643,
+    "f1": 0.7982380390167236
+  },
+  "count": 24
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1859_sorting_the_sentence",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.561576935921079,
+    "ngram_match_score": 0.49155533453013417,
+    "weighted_ngram_match_score": 0.5295041822038274,
+    "syntax_match_score": 0.6933333333333334,
+    "dataflow_match_score": 0.5319148936170213
+  },
+  "codeBert": {
+    "precision": 0.9037488102912903,
+    "recall": 0.8408942818641663,
+    "f1": 0.871189296245575
+  },
+  "count": 25
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1815_maximum_number_of_groups_getting_fresh_donuts",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.06897638989050872,
+    "ngram_match_score": 0.0015461543683171575,
+    "weighted_ngram_match_score": 0.002377735185646304,
+    "syntax_match_score": 0.02072538860103627,
+    "dataflow_match_score": 0.25125628140703515
+  },
+  "codeBert": {
+    "precision": 0.6764498949050903,
+    "recall": 0.6830814480781555,
+    "f1": 0.6797494888305664
+  },
+  "count": 26
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1872_stone_game_viii",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.34778554477076984,
+    "ngram_match_score": 0.12323454083141619,
+    "weighted_ngram_match_score": 0.3026902469473154,
+    "syntax_match_score": 0.5652173913043478,
+    "dataflow_match_score": 0.4
+  },
+  "codeBert": {
+    "precision": 0.8477302193641663,
+    "recall": 0.7753953337669373,
+    "f1": 0.8099509477615356
+  },
+  "count": 27
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1827_minimum_operations_to_make_the_array_increasing",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.6977161928643258,
+    "ngram_match_score": 0.42218023596017157,
+    "weighted_ngram_match_score": 0.5959572627698588,
+    "syntax_match_score": 0.7727272727272727,
+    "dataflow_match_score": 1.0
+  },
+  "codeBert": {
+    "precision": 0.8964983224868774,
+    "recall": 0.8102574944496155,
+    "f1": 0.8511990308761597
+  },
+  "count": 28
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1876_substrings_of_size_three_with_distinct_characters",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.305174097254916,
+    "ngram_match_score": 0.25492336713908176,
+    "weighted_ngram_match_score": 0.26725166372067,
+    "syntax_match_score": 0.4939759036144578,
+    "dataflow_match_score": 0.20454545454545456
+  },
+  "codeBert": {
+    "precision": 0.776599109172821,
+    "recall": 0.7719565629959106,
+    "f1": 0.7742708921432495
+  },
+  "count": 29
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1838_frequency_of_the_most_frequent_element",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3052926530883535,
+    "ngram_match_score": 0.11253501418606475,
+    "weighted_ngram_match_score": 0.1719430917074008,
+    "syntax_match_score": 0.6111111111111112,
+    "dataflow_match_score": 0.32558139534883723
+  },
+  "codeBert": {
+    "precision": 0.7958558797836304,
+    "recall": 0.7606716156005859,
+    "f1": 0.7778661251068115
+  },
+  "count": 30
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1894_find_the_student_that_will_replace_the_chalk",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.13955798996204866,
+    "ngram_match_score": 0.007088925473106376,
+    "weighted_ngram_match_score": 0.05790294113499506,
+    "syntax_match_score": 0.42657342657342656,
+    "dataflow_match_score": 0.06666666666666667
+  },
+  "codeBert": {
+    "precision": 0.6913032531738281,
+    "recall": 0.7729282975196838,
+    "f1": 0.7298406958580017
+  },
+  "count": 31
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1840_maximum_building_height",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.31085003479100454,
+    "ngram_match_score": 0.14174142511943733,
+    "weighted_ngram_match_score": 0.15558482292592282,
+    "syntax_match_score": 0.6422764227642277,
+    "dataflow_match_score": 0.3037974683544304
+  },
+  "codeBert": {
+    "precision": 0.7980350255966187,
+    "recall": 0.790179967880249,
+    "f1": 0.7940880656242371
+  },
+  "count": 32
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1833_maximum_ice_cream_bars",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5313136479147694,
+    "ngram_match_score": 0.25882834344948435,
+    "weighted_ngram_match_score": 0.29189208671891,
+    "syntax_match_score": 0.717391304347826,
+    "dataflow_match_score": 0.8571428571428571
+  },
+  "codeBert": {
+    "precision": 0.8227901458740234,
+    "recall": 0.8051967024803162,
+    "f1": 0.8138983249664307
+  },
+  "count": 33
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1851_minimum_interval_to_include_each_query",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.10577947793390503,
+    "ngram_match_score": 0.0020004413309998464,
+    "weighted_ngram_match_score": 0.0027567537982896625,
+    "syntax_match_score": 0.012345679012345678,
+    "dataflow_match_score": 0.40601503759398494
+  },
+  "codeBert": {
+    "precision": 0.658932089805603,
+    "recall": 0.6675395965576172,
+    "f1": 0.6632079482078552
+  },
+  "count": 34
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1854_maximum_population_year",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4954063878768494,
+    "ngram_match_score": 0.367830221157577,
+    "weighted_ngram_match_score": 0.4205586153739751,
+    "syntax_match_score": 0.6376811594202898,
+    "dataflow_match_score": 0.5555555555555556
+  },
+  "codeBert": {
+    "precision": 0.872480034828186,
+    "recall": 0.8252469301223755,
+    "f1": 0.8482064604759216
+  },
+  "count": 35
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1828_queries_on_number_of_points_inside_a_circle",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.10901605214973545,
+    "ngram_match_score": 0.016115721995402642,
+    "weighted_ngram_match_score": 0.07523630454195947,
+    "syntax_match_score": 0.2891566265060241,
+    "dataflow_match_score": 0.05555555555555555
+  },
+  "codeBert": {
+    "precision": 0.7287755608558655,
+    "recall": 0.7831677198410034,
+    "f1": 0.7549932599067688
+  },
+  "count": 36
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1844_replace_all_digits_with_characters",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.17936434501481582,
+    "ngram_match_score": 0.05572696579247861,
+    "weighted_ngram_match_score": 0.07169017281809255,
+    "syntax_match_score": 0.19718309859154928,
+    "dataflow_match_score": 0.39285714285714285
+  },
+  "codeBert": {
+    "precision": 0.7451127767562866,
+    "recall": 0.7498602867126465,
+    "f1": 0.7474790215492249
+  },
+  "count": 37
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1807_evaluate_the_bracket_pairs_of_a_string",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5258268715533155,
+    "ngram_match_score": 0.3085786078982766,
+    "weighted_ngram_match_score": 0.3220016055877129,
+    "syntax_match_score": 0.7272727272727273,
+    "dataflow_match_score": 0.7454545454545455
+  },
+  "codeBert": {
+    "precision": 0.8493531942367554,
+    "recall": 0.8244738578796387,
+    "f1": 0.8367286324501038
+  },
+  "count": 38
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1861_rotating_the_box",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.5546890394888906,
+    "ngram_match_score": 0.4135494525000399,
+    "weighted_ngram_match_score": 0.4197124183218909,
+    "syntax_match_score": 0.696969696969697,
+    "dataflow_match_score": 0.6885245901639344
+  },
+  "codeBert": {
+    "precision": 0.8687379360198975,
+    "recall": 0.8192970752716064,
+    "f1": 0.8432934880256653
+  },
+  "count": 39
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1802_maximum_value_at_a_given_index_in_a_bounded_array",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2367487102503579,
+    "ngram_match_score": 0.07948992127802541,
+    "weighted_ngram_match_score": 0.1453052753241175,
+    "syntax_match_score": 0.515748031496063,
+    "dataflow_match_score": 0.2064516129032258
+  },
+  "codeBert": {
+    "precision": 0.8262966275215149,
+    "recall": 0.81818687915802,
+    "f1": 0.8222217559814453
+  },
+  "count": 40
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1884_egg_drop_with_2_eggs_and_n_floors",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.12884999145243375,
+    "ngram_match_score": 0.055499801159051475,
+    "weighted_ngram_match_score": 0.06675120173427872,
+    "syntax_match_score": 0.32558139534883723,
+    "dataflow_match_score": 0.06756756756756757
+  },
+  "codeBert": {
+    "precision": 0.7757734060287476,
+    "recall": 0.8008668422698975,
+    "f1": 0.788120448589325
+  },
+  "count": 41
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1881_maximum_value_after_insertion",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3503856245307878,
+    "ngram_match_score": 0.23266541684590059,
+    "weighted_ngram_match_score": 0.24401861498800728,
+    "syntax_match_score": 0.373134328358209,
+    "dataflow_match_score": 0.5517241379310345
+  },
+  "codeBert": {
+    "precision": 0.8075029850006104,
+    "recall": 0.7735136151313782,
+    "f1": 0.7901429533958435
+  },
+  "count": 42
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1835_find_xor_sum_of_all_pairs_bitwise_and",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.16634583481272167,
+    "ngram_match_score": 0.01482953366085757,
+    "weighted_ngram_match_score": 0.09952795960015433,
+    "syntax_match_score": 0.4028776978417266,
+    "dataflow_match_score": 0.14814814814814814
+  },
+  "codeBert": {
+    "precision": 0.7040928602218628,
+    "recall": 0.7993855476379395,
+    "f1": 0.7487192749977112
+  },
+  "count": 43
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1879_minimum_xor_sum_of_two_arrays",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.37532421567775603,
+    "ngram_match_score": 0.16426378307441541,
+    "weighted_ngram_match_score": 0.2498771163338564,
+    "syntax_match_score": 0.5871559633027523,
+    "dataflow_match_score": 0.5
+  },
+  "codeBert": {
+    "precision": 0.8419969081878662,
+    "recall": 0.7866894006729126,
+    "f1": 0.8134040832519531
+  },
+  "count": 44
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1878_get_biggest_three_rhombus_sums_in_a_grid",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.1513686846325968,
+    "ngram_match_score": 0.0016288903761275532,
+    "weighted_ngram_match_score": 0.002784674621176013,
+    "syntax_match_score": 0.005555555555555556,
+    "dataflow_match_score": 0.5955056179775281
+  },
+  "codeBert": {
+    "precision": 0.6732585430145264,
+    "recall": 0.6590877175331116,
+    "f1": 0.6660978198051453
+  },
+  "count": 45
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1834_single_threaded_cpu",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.44662945311504637,
+    "ngram_match_score": 0.3273608930640403,
+    "weighted_ngram_match_score": 0.3362666822201936,
+    "syntax_match_score": 0.7351351351351352,
+    "dataflow_match_score": 0.3877551020408163
+  },
+  "codeBert": {
+    "precision": 0.8486417531967163,
+    "recall": 0.8135025501251221,
+    "f1": 0.830700695514679
+  },
+  "count": 46
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1883_minimum_skips_to_arrive_at_meeting_on_time",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4020984331652989,
+    "ngram_match_score": 0.3314765810239092,
+    "weighted_ngram_match_score": 0.39223859032321107,
+    "syntax_match_score": 0.5575757575757576,
+    "dataflow_match_score": 0.32710280373831774
+  },
+  "codeBert": {
+    "precision": 0.8557552695274353,
+    "recall": 0.8440271019935608,
+    "f1": 0.8498507142066956
+  },
+  "count": 47
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1899_merge_triplets_to_form_target_triplet",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3382466339263292,
+    "ngram_match_score": 0.26029205539686123,
+    "weighted_ngram_match_score": 0.34936114697512216,
+    "syntax_match_score": 0.49333333333333335,
+    "dataflow_match_score": 0.25
+  },
+  "codeBert": {
+    "precision": 0.7646709680557251,
+    "recall": 0.7905571460723877,
+    "f1": 0.7773985862731934
+  },
+  "count": 48
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1803_count_pairs_with_xor_in_a_range",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3354772092474988,
+    "ngram_match_score": 0.23581925350198452,
+    "weighted_ngram_match_score": 0.24792460032302752,
+    "syntax_match_score": 0.6157407407407407,
+    "dataflow_match_score": 0.24242424242424243
+  },
+  "codeBert": {
+    "precision": 0.8354405760765076,
+    "recall": 0.8028345108032227,
+    "f1": 0.8188130259513855
+  },
+  "count": 49
+}
+{
+  "prompt_technik": "ToT",
+  "task_id": "/java/g1801_1900/s1889_minimum_space_wasted_from_packaging",
+  "model_name": "gpt35",
+  "model_type": "openai",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.08498207286540527,
+    "ngram_match_score": 0.003461951264947979,
+    "weighted_ngram_match_score": 0.003849128014188591,
+    "syntax_match_score": 0.015544041450777202,
+    "dataflow_match_score": 0.3170731707317073
+  },
+  "codeBert": {
+    "precision": 0.693278431892395,
+    "recall": 0.6916908621788025,
+    "f1": 0.6924837827682495
+  },
+  "count": 50
+}

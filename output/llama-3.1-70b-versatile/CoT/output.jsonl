@@ -1,0 +1,1050 @@
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4085645042847449,
+    "ngram_match_score": 0.19440633401348897,
+    "weighted_ngram_match_score": 0.3598516831254905,
+    "syntax_match_score": 0.6,
+    "dataflow_match_score": 0.48
+  },
+  "codeBert": {
+    "precision": 0.8291464447975159,
+    "recall": 0.7515025734901428,
+    "f1": 0.7884175181388855
+  },
+  "count": 1
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1819_number_of_different_subsequences_gcds",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.12529570506708898,
+    "ngram_match_score": 0.08183163321247357,
+    "weighted_ngram_match_score": 0.09375997083966606,
+    "syntax_match_score": 0.109375,
+    "dataflow_match_score": 0.21621621621621623
+  },
+  "codeBert": {
+    "precision": 0.6547425389289856,
+    "recall": 0.720897912979126,
+    "f1": 0.6862295269966125
+  },
+  "count": 2
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1897_redistribute_characters_to_make_all_strings_equal",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.38200271916449363,
+    "ngram_match_score": 0.3551315324622728,
+    "weighted_ngram_match_score": 0.3972383185546763,
+    "syntax_match_score": 0.4423076923076923,
+    "dataflow_match_score": 0.3333333333333333
+  },
+  "codeBert": {
+    "precision": 0.8095231056213379,
+    "recall": 0.8764592409133911,
+    "f1": 0.8416624665260315
+  },
+  "count": 3
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1848_minimum_distance_to_the_target_element",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.6497473651005856,
+    "ngram_match_score": 0.5723326692268405,
+    "weighted_ngram_match_score": 0.7272381865243394,
+    "syntax_match_score": 0.6744186046511628,
+    "dataflow_match_score": 0.625
+  },
+  "codeBert": {
+    "precision": 0.9613084197044373,
+    "recall": 0.9479071497917175,
+    "f1": 0.9545606970787048
+  },
+  "count": 4
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1801_number_of_orders_in_the_backlog",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.29882136114119967,
+    "ngram_match_score": 0.153665487068766,
+    "weighted_ngram_match_score": 0.21527452570629546,
+    "syntax_match_score": 0.4734042553191489,
+    "dataflow_match_score": 0.35294117647058826
+  },
+  "codeBert": {
+    "precision": 0.8202012777328491,
+    "recall": 0.7787241339683533,
+    "f1": 0.7989248037338257
+  },
+  "count": 5
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1887_reduction_operations_to_make_the_array_elements_equal",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3878314842673972,
+    "ngram_match_score": 0.3273718013780099,
+    "weighted_ngram_match_score": 0.3437798437525813,
+    "syntax_match_score": 0.5098039215686274,
+    "dataflow_match_score": 0.37037037037037035
+  },
+  "codeBert": {
+    "precision": 0.844081699848175,
+    "recall": 0.8909965753555298,
+    "f1": 0.8669047951698303
+  },
+  "count": 6
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1896_minimum_cost_to_change_the_final_value_of_expression",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.27079540465202595,
+    "ngram_match_score": 0.14160488632920462,
+    "weighted_ngram_match_score": 0.22139087786485684,
+    "syntax_match_score": 0.33557046979865773,
+    "dataflow_match_score": 0.38461538461538464
+  },
+  "codeBert": {
+    "precision": 0.795390248298645,
+    "recall": 0.7657496333122253,
+    "f1": 0.780288577079773
+  },
+  "count": 7
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1856_maximum_subarray_min_product",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3004575821926566,
+    "ngram_match_score": 0.03724522704104003,
+    "weighted_ngram_match_score": 0.12317723423476244,
+    "syntax_match_score": 0.5652173913043478,
+    "dataflow_match_score": 0.47619047619047616
+  },
+  "codeBert": {
+    "precision": 0.7255133390426636,
+    "recall": 0.7210102081298828,
+    "f1": 0.7232547402381897
+  },
+  "count": 8
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1877_minimize_maximum_pair_sum_in_array",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.38083272235757815,
+    "ngram_match_score": 0.18111639660992568,
+    "weighted_ngram_match_score": 0.25024124867322983,
+    "syntax_match_score": 0.6304347826086957,
+    "dataflow_match_score": 0.46153846153846156
+  },
+  "codeBert": {
+    "precision": 0.8231233954429626,
+    "recall": 0.9115793704986572,
+    "f1": 0.8650960922241211
+  },
+  "count": 9
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1850_minimum_adjacent_swaps_to_reach_the_kth_smallest_number",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3933347182459327,
+    "ngram_match_score": 0.2729296816323977,
+    "weighted_ngram_match_score": 0.28371216645758685,
+    "syntax_match_score": 0.7759562841530054,
+    "dataflow_match_score": 0.24074074074074073
+  },
+  "codeBert": {
+    "precision": 0.8740129470825195,
+    "recall": 0.8856905698776245,
+    "f1": 0.879813015460968
+  },
+  "count": 10
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1846_maximum_element_after_decreasing_and_rearranging",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2614475145704047,
+    "ngram_match_score": 0.1977975244812131,
+    "weighted_ngram_match_score": 0.25383445819903117,
+    "syntax_match_score": 0.36082474226804123,
+    "dataflow_match_score": 0.23333333333333334
+  },
+  "codeBert": {
+    "precision": 0.7668807506561279,
+    "recall": 0.8970953226089478,
+    "f1": 0.8268930912017822
+  },
+  "count": 11
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1813_sentence_similarity_iii",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.49566079991603557,
+    "ngram_match_score": 0.40511244454271583,
+    "weighted_ngram_match_score": 0.49057423338229605,
+    "syntax_match_score": 0.6521739130434783,
+    "dataflow_match_score": 0.43478260869565216
+  },
+  "codeBert": {
+    "precision": 0.8759813904762268,
+    "recall": 0.7938464879989624,
+    "f1": 0.8328939080238342
+  },
+  "count": 12
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1822_sign_of_the_product_of_an_array",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.671286775983486,
+    "ngram_match_score": 0.5495815213913582,
+    "weighted_ngram_match_score": 0.72950497648198,
+    "syntax_match_score": 0.6060606060606061,
+    "dataflow_match_score": 0.8
+  },
+  "codeBert": {
+    "precision": 0.8911999464035034,
+    "recall": 0.7582225203514099,
+    "f1": 0.8193508982658386
+  },
+  "count": 13
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1900_the_earliest_and_latest_rounds_where_players_compete",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.28779048541532426,
+    "ngram_match_score": 0.06274813585008956,
+    "weighted_ngram_match_score": 0.18045360680623243,
+    "syntax_match_score": 0.5746268656716418,
+    "dataflow_match_score": 0.3333333333333333
+  },
+  "codeBert": {
+    "precision": 0.8202847838401794,
+    "recall": 0.7476907968521118,
+    "f1": 0.7823073863983154
+  },
+  "count": 14
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1830_minimum_number_of_operations_to_make_string_sorted",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3616373645069713,
+    "ngram_match_score": 0.1373475162226394,
+    "weighted_ngram_match_score": 0.3761149138906318,
+    "syntax_match_score": 0.5402298850574713,
+    "dataflow_match_score": 0.39285714285714285
+  },
+  "codeBert": {
+    "precision": 0.8017345070838928,
+    "recall": 0.7609100341796875,
+    "f1": 0.7807890176773071
+  },
+  "count": 15
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1888_minimum_number_of_flips_to_make_the_binary_string_alternating",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.06464149134751945,
+    "ngram_match_score": 0.00016277713881055004,
+    "weighted_ngram_match_score": 0.001135746390802132,
+    "syntax_match_score": 0.06976744186046512,
+    "dataflow_match_score": 0.1875
+  },
+  "codeBert": {
+    "precision": 0.5932974219322205,
+    "recall": 0.6184621453285217,
+    "f1": 0.6056184768676758
+  },
+  "count": 16
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1817_finding_the_users_active_minutes",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2714102123885913,
+    "ngram_match_score": 0.09703383425224578,
+    "weighted_ngram_match_score": 0.11323163992674411,
+    "syntax_match_score": 0.3888888888888889,
+    "dataflow_match_score": 0.4864864864864865
+  },
+  "codeBert": {
+    "precision": 0.7271521687507629,
+    "recall": 0.7461504936218262,
+    "f1": 0.7365288138389587
+  },
+  "count": 17
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1866_number_of_ways_to_rearrange_sticks_with_k_sticks_visible",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.17584899202136395,
+    "ngram_match_score": 0.016014717337631837,
+    "weighted_ngram_match_score": 0.04253998090655416,
+    "syntax_match_score": 0.2698412698412698,
+    "dataflow_match_score": 0.375
+  },
+  "codeBert": {
+    "precision": 0.6411436796188354,
+    "recall": 0.7636235356330872,
+    "f1": 0.6970441341400146
+  },
+  "count": 18
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1837_sum_of_digits_in_base_k",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4664367790676479,
+    "ngram_match_score": 0.40852918594270415,
+    "weighted_ngram_match_score": 0.5211909943009514,
+    "syntax_match_score": 0.48148148148148145,
+    "dataflow_match_score": 0.45454545454545453
+  },
+  "codeBert": {
+    "precision": 0.9010338187217712,
+    "recall": 0.7423236966133118,
+    "f1": 0.8140149116516113
+  },
+  "count": 19
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1864_minimum_number_of_swaps_to_make_the_binary_string_alternating",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.33690560158328964,
+    "ngram_match_score": 0.20501997409163183,
+    "weighted_ngram_match_score": 0.25021469949234837,
+    "syntax_match_score": 0.5060240963855421,
+    "dataflow_match_score": 0.38636363636363635
+  },
+  "codeBert": {
+    "precision": 0.8155198693275452,
+    "recall": 0.7534226179122925,
+    "f1": 0.7832423448562622
+  },
+  "count": 20
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1847_closest_room",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.32444153912691953,
+    "ngram_match_score": 0.14466503183259896,
+    "weighted_ngram_match_score": 0.25029164958261046,
+    "syntax_match_score": 0.5419847328244275,
+    "dataflow_match_score": 0.36082474226804123
+  },
+  "codeBert": {
+    "precision": 0.8319523334503174,
+    "recall": 0.7929738163948059,
+    "f1": 0.8119956254959106
+  },
+  "count": 21
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1816_truncate_sentence",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.6193790579779643,
+    "ngram_match_score": 0.41148331365714413,
+    "weighted_ngram_match_score": 0.4395507048159781,
+    "syntax_match_score": 0.717391304347826,
+    "dataflow_match_score": 0.9090909090909091
+  },
+  "codeBert": {
+    "precision": 0.8698895573616028,
+    "recall": 0.827195942401886,
+    "f1": 0.8480057120323181
+  },
+  "count": 22
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1869_longer_contiguous_segments_of_ones_than_zeros",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3840628604677637,
+    "ngram_match_score": 0.16740609763742845,
+    "weighted_ngram_match_score": 0.2566433806992647,
+    "syntax_match_score": 0.43478260869565216,
+    "dataflow_match_score": 0.6774193548387096
+  },
+  "codeBert": {
+    "precision": 0.8023072481155396,
+    "recall": 0.7601090669631958,
+    "f1": 0.7806382775306702
+  },
+  "count": 23
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1814_count_nice_pairs_in_an_array",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.5004711360523255,
+    "ngram_match_score": 0.39958558265628363,
+    "weighted_ngram_match_score": 0.417071688825746,
+    "syntax_match_score": 0.6625,
+    "dataflow_match_score": 0.5227272727272727
+  },
+  "codeBert": {
+    "precision": 0.8725123405456543,
+    "recall": 0.8660180568695068,
+    "f1": 0.8692530393600464
+  },
+  "count": 24
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1859_sorting_the_sentence",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.39110611177327226,
+    "ngram_match_score": 0.17147297239509918,
+    "weighted_ngram_match_score": 0.23739591914243416,
+    "syntax_match_score": 0.6666666666666666,
+    "dataflow_match_score": 0.4888888888888889
+  },
+  "codeBert": {
+    "precision": 0.7946286201477051,
+    "recall": 0.8370690941810608,
+    "f1": 0.8152969479560852
+  },
+  "count": 25
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1815_maximum_number_of_groups_getting_fresh_donuts",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3009208317041046,
+    "ngram_match_score": 0.18019188145867282,
+    "weighted_ngram_match_score": 0.20361482682340895,
+    "syntax_match_score": 0.4966442953020134,
+    "dataflow_match_score": 0.32323232323232326
+  },
+  "codeBert": {
+    "precision": 0.7896392345428467,
+    "recall": 0.7514355778694153,
+    "f1": 0.7700638771057129
+  },
+  "count": 26
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1872_stone_game_viii",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.37534524436510197,
+    "ngram_match_score": 0.33164738349462797,
+    "weighted_ngram_match_score": 0.3364002606324464,
+    "syntax_match_score": 0.5833333333333334,
+    "dataflow_match_score": 0.25
+  },
+  "codeBert": {
+    "precision": 0.8690065145492554,
+    "recall": 0.8643130660057068,
+    "f1": 0.8666534423828125
+  },
+  "count": 27
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1827_minimum_operations_to_make_the_array_increasing",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.7253886014306894,
+    "ngram_match_score": 0.7277013054506165,
+    "weighted_ngram_match_score": 0.7307092875631113,
+    "syntax_match_score": 0.6739130434782609,
+    "dataflow_match_score": 0.7692307692307693
+  },
+  "codeBert": {
+    "precision": 0.9657987356185913,
+    "recall": 0.9627456068992615,
+    "f1": 0.9642698168754578
+  },
+  "count": 28
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1876_substrings_of_size_three_with_distinct_characters",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.5574129214505494,
+    "ngram_match_score": 0.49270803852940737,
+    "weighted_ngram_match_score": 0.5113026216317647,
+    "syntax_match_score": 0.49230769230769234,
+    "dataflow_match_score": 0.7333333333333333
+  },
+  "codeBert": {
+    "precision": 0.8989622592926025,
+    "recall": 0.9213100075721741,
+    "f1": 0.9099990129470825
+  },
+  "count": 29
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1838_frequency_of_the_most_frequent_element",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.39449536978469735,
+    "ngram_match_score": 0.20467813909354274,
+    "weighted_ngram_match_score": 0.3120130174646017,
+    "syntax_match_score": 0.6612903225806451,
+    "dataflow_match_score": 0.4
+  },
+  "codeBert": {
+    "precision": 0.8782855868339539,
+    "recall": 0.8563326597213745,
+    "f1": 0.8671702742576599
+  },
+  "count": 30
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1894_find_the_student_that_will_replace_the_chalk",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4795646410720379,
+    "ngram_match_score": 0.3723880198333443,
+    "weighted_ngram_match_score": 0.43826386541955664,
+    "syntax_match_score": 0.6530612244897959,
+    "dataflow_match_score": 0.45454545454545453
+  },
+  "codeBert": {
+    "precision": 0.8303083181381226,
+    "recall": 0.7464275360107422,
+    "f1": 0.7861367464065552
+  },
+  "count": 31
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1840_maximum_building_height",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.40566872578451635,
+    "ngram_match_score": 0.11213978108229766,
+    "weighted_ngram_match_score": 0.3518394698818547,
+    "syntax_match_score": 0.6086956521739131,
+    "dataflow_match_score": 0.55
+  },
+  "codeBert": {
+    "precision": 0.8765078783035278,
+    "recall": 0.7473828196525574,
+    "f1": 0.8068116307258606
+  },
+  "count": 32
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1833_maximum_ice_cream_bars",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.40550299300272463,
+    "ngram_match_score": 0.07685966771831826,
+    "weighted_ngram_match_score": 0.1852083267015438,
+    "syntax_match_score": 0.5952380952380952,
+    "dataflow_match_score": 0.7647058823529411
+  },
+  "codeBert": {
+    "precision": 0.749828577041626,
+    "recall": 0.9205671548843384,
+    "f1": 0.8264718651771545
+  },
+  "count": 33
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1851_minimum_interval_to_include_each_query",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.40332863332620594,
+    "ngram_match_score": 0.1786900983687109,
+    "weighted_ngram_match_score": 0.21405386436554247,
+    "syntax_match_score": 0.7094594594594594,
+    "dataflow_match_score": 0.5111111111111111
+  },
+  "codeBert": {
+    "precision": 0.8267854452133179,
+    "recall": 0.8760310411453247,
+    "f1": 0.8506961464881897
+  },
+  "count": 34
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1854_maximum_population_year",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.31552372210513924,
+    "ngram_match_score": 0.2987618775579828,
+    "weighted_ngram_match_score": 0.31433119598054143,
+    "syntax_match_score": 0.4421052631578947,
+    "dataflow_match_score": 0.20689655172413793
+  },
+  "codeBert": {
+    "precision": 0.8289032578468323,
+    "recall": 0.8698203563690186,
+    "f1": 0.8488690257072449
+  },
+  "count": 35
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1828_queries_on_number_of_points_inside_a_circle",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.29716527777716084,
+    "ngram_match_score": 0.20483602092881031,
+    "weighted_ngram_match_score": 0.2169711575955633,
+    "syntax_match_score": 0.5168539325842697,
+    "dataflow_match_score": 0.25
+  },
+  "codeBert": {
+    "precision": 0.8434960842132568,
+    "recall": 0.812267541885376,
+    "f1": 0.8275873064994812
+  },
+  "count": 36
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1844_replace_all_digits_with_characters",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3207465542469101,
+    "ngram_match_score": 0.19115595081693124,
+    "weighted_ngram_match_score": 0.203368727709171,
+    "syntax_match_score": 0.28846153846153844,
+    "dataflow_match_score": 0.6
+  },
+  "codeBert": {
+    "precision": 0.8180440664291382,
+    "recall": 0.7596109509468079,
+    "f1": 0.7877453565597534
+  },
+  "count": 37
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1807_evaluate_the_bracket_pairs_of_a_string",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.45811165721800556,
+    "ngram_match_score": 0.1636555326642628,
+    "weighted_ngram_match_score": 0.2061256063578035,
+    "syntax_match_score": 0.6990291262135923,
+    "dataflow_match_score": 0.7636363636363637
+  },
+  "codeBert": {
+    "precision": 0.7797861099243164,
+    "recall": 0.8190534710884094,
+    "f1": 0.7989376187324524
+  },
+  "count": 38
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1861_rotating_the_box",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5365667892298814,
+    "ngram_match_score": 0.3285780287334653,
+    "weighted_ngram_match_score": 0.41608270248324913,
+    "syntax_match_score": 0.7349397590361446,
+    "dataflow_match_score": 0.6666666666666666
+  },
+  "codeBert": {
+    "precision": 0.8929365277290344,
+    "recall": 0.8135998845100403,
+    "f1": 0.8514240384101868
+  },
+  "count": 39
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1802_maximum_value_at_a_given_index_in_a_bounded_array",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.41769461334285557,
+    "ngram_match_score": 0.3040980777705674,
+    "weighted_ngram_match_score": 0.3408960265204367,
+    "syntax_match_score": 0.5851063829787234,
+    "dataflow_match_score": 0.4406779661016949
+  },
+  "codeBert": {
+    "precision": 0.8340308666229248,
+    "recall": 0.774917721748352,
+    "f1": 0.8033884167671204
+  },
+  "count": 40
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1884_egg_drop_with_2_eggs_and_n_floors",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.34337036141189126,
+    "ngram_match_score": 0.08909307076787715,
+    "weighted_ngram_match_score": 0.3345451146915999,
+    "syntax_match_score": 0.5862068965517241,
+    "dataflow_match_score": 0.36363636363636365
+  },
+  "codeBert": {
+    "precision": 0.8278835415840149,
+    "recall": 0.659554660320282,
+    "f1": 0.7341944575309753
+  },
+  "count": 41
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1881_maximum_value_after_insertion",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.22147205473380682,
+    "ngram_match_score": 0.18147501147309977,
+    "weighted_ngram_match_score": 0.21631796936688946,
+    "syntax_match_score": 0.23809523809523808,
+    "dataflow_match_score": 0.25
+  },
+  "codeBert": {
+    "precision": 0.7707408666610718,
+    "recall": 0.8667792677879333,
+    "f1": 0.8159438371658325
+  },
+  "count": 42
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1835_find_xor_sum_of_all_pairs_bitwise_and",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5668823100504118,
+    "ngram_match_score": 0.3608357429855731,
+    "weighted_ngram_match_score": 0.42058238610496296,
+    "syntax_match_score": 0.8611111111111112,
+    "dataflow_match_score": 0.625
+  },
+  "codeBert": {
+    "precision": 0.9088877439498901,
+    "recall": 0.8239140510559082,
+    "f1": 0.8643174171447754
+  },
+  "count": 43
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1879_minimum_xor_sum_of_two_arrays",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4466305692568598,
+    "ngram_match_score": 0.19991147466933967,
+    "weighted_ngram_match_score": 0.3161290219716968,
+    "syntax_match_score": 0.632183908045977,
+    "dataflow_match_score": 0.6382978723404256
+  },
+  "codeBert": {
+    "precision": 0.8478255271911621,
+    "recall": 0.7869584560394287,
+    "f1": 0.8162589073181152
+  },
+  "count": 44
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1878_get_biggest_three_rhombus_sums_in_a_grid",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.32144280223501404,
+    "ngram_match_score": 0.10888277630524519,
+    "weighted_ngram_match_score": 0.21297216148962408,
+    "syntax_match_score": 0.6204819277108434,
+    "dataflow_match_score": 0.3434343434343434
+  },
+  "codeBert": {
+    "precision": 0.842668890953064,
+    "recall": 0.7716146111488342,
+    "f1": 0.8055779337882996
+  },
+  "count": 45
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1834_single_threaded_cpu",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3724190684204831,
+    "ngram_match_score": 0.18497618182680575,
+    "weighted_ngram_match_score": 0.2056147260014682,
+    "syntax_match_score": 0.5625,
+    "dataflow_match_score": 0.5365853658536586
+  },
+  "codeBert": {
+    "precision": 0.8088668584823608,
+    "recall": 0.8516938090324402,
+    "f1": 0.8297281265258789
+  },
+  "count": 46
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1883_minimum_skips_to_arrive_at_meeting_on_time",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4772006274136344,
+    "ngram_match_score": 0.316298627539785,
+    "weighted_ngram_match_score": 0.38694216740669635,
+    "syntax_match_score": 0.6260162601626016,
+    "dataflow_match_score": 0.5795454545454546
+  },
+  "codeBert": {
+    "precision": 0.8625122904777527,
+    "recall": 0.8307531476020813,
+    "f1": 0.8463348746299744
+  },
+  "count": 47
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1899_merge_triplets_to_form_target_triplet",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.42592146146826315,
+    "ngram_match_score": 0.28351063536910664,
+    "weighted_ngram_match_score": 0.46492829692369914,
+    "syntax_match_score": 0.5802469135802469,
+    "dataflow_match_score": 0.375
+  },
+  "codeBert": {
+    "precision": 0.8477587699890137,
+    "recall": 0.792140007019043,
+    "f1": 0.8190062046051025
+  },
+  "count": 48
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1803_count_pairs_with_xor_in_a_range",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.24848293247062506,
+    "ngram_match_score": 0.010048471385634725,
+    "weighted_ngram_match_score": 0.013645163258770299,
+    "syntax_match_score": 0.5952380952380952,
+    "dataflow_match_score": 0.375
+  },
+  "codeBert": {
+    "precision": 0.6541153192520142,
+    "recall": 0.6992164850234985,
+    "f1": 0.6759144067764282
+  },
+  "count": 49
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1889_minimum_space_wasted_from_packaging",
+  "model_name": "llama-3.1-70b-versatile",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.46180848431962435,
+    "ngram_match_score": 0.22917443381455258,
+    "weighted_ngram_match_score": 0.38861319473911266,
+    "syntax_match_score": 0.7919463087248322,
+    "dataflow_match_score": 0.4375
+  },
+  "codeBert": {
+    "precision": 0.8570278882980347,
+    "recall": 0.7785281538963318,
+    "f1": 0.8158942461013794
+  },
+  "count": 50
+}

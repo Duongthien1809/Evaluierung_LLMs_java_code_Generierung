@@ -28,7 +28,7 @@ def extract_class_body(generated_code):
     return filtered_code
 
 
-def insert_code_into_solution_frame(generated_code):
+def insert_code_into_solution_frame_for_load_dataset(generated_code):
     """
     Fügt den generierten Code in die Rahmenklasse Solution.java ein.
     """
@@ -49,6 +49,18 @@ def insert_test_code_into_solution_test_frame(test_code):
 %s
 """
     return solution_test_frame % class_body
+
+
+def insert_code_into_solution_frame(generated_code):
+    """
+    Fügt den generierten Code in die Rahmenklasse Solution.java ein.
+    """
+    package_statement = "package referenz;"
+
+    if package_statement not in generated_code:
+        generated_code = f"{package_statement}\n{generated_code}"
+
+    return generated_code
 
 
 def save_results_as_jsonl(results, output_file):

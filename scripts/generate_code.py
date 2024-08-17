@@ -20,17 +20,16 @@ openai_client = AzureOpenAI(
 
 # Initialisiere Groq-Client
 llama_client = Groq(
-    api_key=os.getenv("GROQ_API_KEY"),
+    api_key=os.getenv("GROQ_API_KEY_1"),
 )
 
 
 def generate_code_llama(prompt, model_name):
     completion = llama_client.chat.completions.create(
         model=model_name,
-        messages=[{"role": "assistant", "content": prompt}],
-        temperature=1,
-        max_tokens=1024,
-        top_p=1,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.2,
+        max_tokens=800,
         stream=False,
         stop=None,
     )

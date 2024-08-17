@@ -1,0 +1,1 @@
+{"prompt_technik": "CoT", "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time", "model_name": "gemma2-9b-it", "model_type": "llama", "n_runs": 50, "successful_evaluations": 0, "pass_at_k": 0.0, "completion_score": 0.0, "compilable_score": 1.0}

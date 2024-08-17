@@ -1,0 +1,1050 @@
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.348097782831144,
+    "ngram_match_score": 0.14694313640760243,
+    "weighted_ngram_match_score": 0.16436691383589272,
+    "syntax_match_score": 0.5675675675675675,
+    "dataflow_match_score": 0.5135135135135135
+  },
+  "codeBert": {
+    "precision": 0.7842338681221008,
+    "recall": 0.795312762260437,
+    "f1": 0.7897344827651978
+  },
+  "count": 1
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1819_number_of_different_subsequences_gcds",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.34293440128281993,
+    "ngram_match_score": 0.22416451074250657,
+    "weighted_ngram_match_score": 0.2457341925498715,
+    "syntax_match_score": 0.5314685314685315,
+    "dataflow_match_score": 0.37037037037037035
+  },
+  "codeBert": {
+    "precision": 0.8451240658760071,
+    "recall": 0.8720127940177917,
+    "f1": 0.8583579063415527
+  },
+  "count": 2
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1897_redistribute_characters_to_make_all_strings_equal",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.45941951382798085,
+    "ngram_match_score": 0.48361718269045956,
+    "weighted_ngram_match_score": 0.4954437415585123,
+    "syntax_match_score": 0.49019607843137253,
+    "dataflow_match_score": 0.3684210526315789
+  },
+  "codeBert": {
+    "precision": 0.9082770347595215,
+    "recall": 0.9075152277946472,
+    "f1": 0.9078959822654724
+  },
+  "count": 3
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1848_minimum_distance_to_the_target_element",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.6390574768453191,
+    "ngram_match_score": 0.48205953175399124,
+    "weighted_ngram_match_score": 0.6694084708653804,
+    "syntax_match_score": 0.7380952380952381,
+    "dataflow_match_score": 0.6666666666666666
+  },
+  "codeBert": {
+    "precision": 0.913024365901947,
+    "recall": 0.8240466117858887,
+    "f1": 0.8662566542625427
+  },
+  "count": 4
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1801_number_of_orders_in_the_backlog",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3810653557124971,
+    "ngram_match_score": 0.16106534882853263,
+    "weighted_ngram_match_score": 0.17971654185771319,
+    "syntax_match_score": 0.6140350877192983,
+    "dataflow_match_score": 0.5694444444444444
+  },
+  "codeBert": {
+    "precision": 0.8048318028450012,
+    "recall": 0.8225258588790894,
+    "f1": 0.8135826587677002
+  },
+  "count": 5
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1887_reduction_operations_to_make_the_array_elements_equal",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.39480223141539705,
+    "ngram_match_score": 0.3232057766750271,
+    "weighted_ngram_match_score": 0.3499922200248126,
+    "syntax_match_score": 0.639344262295082,
+    "dataflow_match_score": 0.26666666666666666
+  },
+  "codeBert": {
+    "precision": 0.8589283227920532,
+    "recall": 0.9054574370384216,
+    "f1": 0.8815793395042419
+  },
+  "count": 6
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1896_minimum_cost_to_change_the_final_value_of_expression",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.1856362887531088,
+    "ngram_match_score": 0.11207124224037086,
+    "weighted_ngram_match_score": 0.11921100735961257,
+    "syntax_match_score": 0.19730941704035873,
+    "dataflow_match_score": 0.313953488372093
+  },
+  "codeBert": {
+    "precision": 0.7920613288879395,
+    "recall": 0.7943586707115173,
+    "f1": 0.7932083010673523
+  },
+  "count": 7
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1856_maximum_subarray_min_product",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.33713112723686656,
+    "ngram_match_score": 0.10872291667296897,
+    "weighted_ngram_match_score": 0.2148015922744974,
+    "syntax_match_score": 0.5,
+    "dataflow_match_score": 0.525
+  },
+  "codeBert": {
+    "precision": 0.7967607378959656,
+    "recall": 0.7651160955429077,
+    "f1": 0.780617892742157
+  },
+  "count": 8
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1877_minimize_maximum_pair_sum_in_array",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3536279898985325,
+    "ngram_match_score": 0.28278996984044946,
+    "weighted_ngram_match_score": 0.2952830663582352,
+    "syntax_match_score": 0.6190476190476191,
+    "dataflow_match_score": 0.21739130434782608
+  },
+  "codeBert": {
+    "precision": 0.8779535889625549,
+    "recall": 0.8748247623443604,
+    "f1": 0.8763864636421204
+  },
+  "count": 9
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1850_minimum_adjacent_swaps_to_reach_the_kth_smallest_number",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3498201358540578,
+    "ngram_match_score": 0.22262231422846404,
+    "weighted_ngram_match_score": 0.23858695466789467,
+    "syntax_match_score": 0.6483516483516484,
+    "dataflow_match_score": 0.2897196261682243
+  },
+  "codeBert": {
+    "precision": 0.8360409736633301,
+    "recall": 0.8780515193939209,
+    "f1": 0.8565314412117004
+  },
+  "count": 10
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1846_maximum_element_after_decreasing_and_rearranging",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.33351614900887383,
+    "ngram_match_score": 0.22051140719986514,
+    "weighted_ngram_match_score": 0.2417583170407585,
+    "syntax_match_score": 0.48717948717948717,
+    "dataflow_match_score": 0.38461538461538464
+  },
+  "codeBert": {
+    "precision": 0.8295221924781799,
+    "recall": 0.8811019062995911,
+    "f1": 0.8545344471931458
+  },
+  "count": 11
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1813_sentence_similarity_iii",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3916818973389361,
+    "ngram_match_score": 0.27943741247781206,
+    "weighted_ngram_match_score": 0.2993774410288758,
+    "syntax_match_score": 0.5660377358490566,
+    "dataflow_match_score": 0.421875
+  },
+  "codeBert": {
+    "precision": 0.8376259803771973,
+    "recall": 0.8829506635665894,
+    "f1": 0.859691321849823
+  },
+  "count": 12
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1822_sign_of_the_product_of_an_array",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.6032310365009631,
+    "ngram_match_score": 0.4119100766704544,
+    "weighted_ngram_match_score": 0.4871251804445091,
+    "syntax_match_score": 0.625,
+    "dataflow_match_score": 0.8888888888888888
+  },
+  "codeBert": {
+    "precision": 0.9159382581710815,
+    "recall": 0.890286922454834,
+    "f1": 0.9029304385185242
+  },
+  "count": 13
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1900_the_earliest_and_latest_rounds_where_players_compete",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3865619263584562,
+    "ngram_match_score": 0.2934418570374753,
+    "weighted_ngram_match_score": 0.4150533231438242,
+    "syntax_match_score": 0.5252525252525253,
+    "dataflow_match_score": 0.3125
+  },
+  "codeBert": {
+    "precision": 0.854128360748291,
+    "recall": 0.8551496863365173,
+    "f1": 0.8546386957168579
+  },
+  "count": 14
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1830_minimum_number_of_operations_to_make_string_sorted",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.320607506004949,
+    "ngram_match_score": 0.188477788068955,
+    "weighted_ngram_match_score": 0.28390095389955905,
+    "syntax_match_score": 0.528,
+    "dataflow_match_score": 0.28205128205128205
+  },
+  "codeBert": {
+    "precision": 0.8360010981559753,
+    "recall": 0.7996516823768616,
+    "f1": 0.8174224495887756
+  },
+  "count": 15
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1888_minimum_number_of_flips_to_make_the_binary_string_alternating",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.32320536825076646,
+    "ngram_match_score": 0.21304716691355208,
+    "weighted_ngram_match_score": 0.22929710566533557,
+    "syntax_match_score": 0.524390243902439,
+    "dataflow_match_score": 0.32608695652173914
+  },
+  "codeBert": {
+    "precision": 0.7792614698410034,
+    "recall": 0.8194444179534912,
+    "f1": 0.7988479733467102
+  },
+  "count": 16
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1817_finding_the_users_active_minutes",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.39763284712383984,
+    "ngram_match_score": 0.16707927122435343,
+    "weighted_ngram_match_score": 0.3065938797231132,
+    "syntax_match_score": 0.6724137931034483,
+    "dataflow_match_score": 0.4444444444444444
+  },
+  "codeBert": {
+    "precision": 0.8795673251152039,
+    "recall": 0.7840216159820557,
+    "f1": 0.8290507197380066
+  },
+  "count": 17
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1866_number_of_ways_to_rearrange_sticks_with_k_sticks_visible",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4160561827845912,
+    "ngram_match_score": 0.3681108795203059,
+    "weighted_ngram_match_score": 0.42581171455099937,
+    "syntax_match_score": 0.5652173913043478,
+    "dataflow_match_score": 0.3050847457627119
+  },
+  "codeBert": {
+    "precision": 0.9218989014625549,
+    "recall": 0.9079656004905701,
+    "f1": 0.9148792028427124
+  },
+  "count": 18
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1837_sum_of_digits_in_base_k",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5237786745319291,
+    "ngram_match_score": 0.5437022837024945,
+    "weighted_ngram_match_score": 0.6153854783982857,
+    "syntax_match_score": 0.48148148148148145,
+    "dataflow_match_score": 0.45454545454545453
+  },
+  "codeBert": {
+    "precision": 0.954993724822998,
+    "recall": 0.8700789213180542,
+    "f1": 0.9105609059333801
+  },
+  "count": 19
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1864_minimum_number_of_swaps_to_make_the_binary_string_alternating",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.23427811594934442,
+    "ngram_match_score": 0.09537541687192712,
+    "weighted_ngram_match_score": 0.11922674244466337,
+    "syntax_match_score": 0.4036697247706422,
+    "dataflow_match_score": 0.3188405797101449
+  },
+  "codeBert": {
+    "precision": 0.7720049023628235,
+    "recall": 0.7916305065155029,
+    "f1": 0.7816945910453796
+  },
+  "count": 20
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1847_closest_room",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4274331057567398,
+    "ngram_match_score": 0.16956803525969263,
+    "weighted_ngram_match_score": 0.22562250616569457,
+    "syntax_match_score": 0.7203389830508474,
+    "dataflow_match_score": 0.5942028985507246
+  },
+  "codeBert": {
+    "precision": 0.7930130958557129,
+    "recall": 0.7889741063117981,
+    "f1": 0.7909884452819824
+  },
+  "count": 21
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1816_truncate_sentence",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.561098457282513,
+    "ngram_match_score": 0.47582097209805074,
+    "weighted_ngram_match_score": 0.4839408223999664,
+    "syntax_match_score": 0.5227272727272727,
+    "dataflow_match_score": 0.7619047619047619
+  },
+  "codeBert": {
+    "precision": 0.8900361061096191,
+    "recall": 0.7919480204582214,
+    "f1": 0.8381319642066956
+  },
+  "count": 22
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1869_longer_contiguous_segments_of_ones_than_zeros",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.46134649564071784,
+    "ngram_match_score": 0.2507713662035339,
+    "weighted_ngram_match_score": 0.28451846251318363,
+    "syntax_match_score": 0.6538461538461539,
+    "dataflow_match_score": 0.65625
+  },
+  "codeBert": {
+    "precision": 0.8241045475006104,
+    "recall": 0.8606055974960327,
+    "f1": 0.8419596552848816
+  },
+  "count": 23
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1814_count_nice_pairs_in_an_array",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.41128724375515097,
+    "ngram_match_score": 0.3079829704736885,
+    "weighted_ngram_match_score": 0.33516350141800433,
+    "syntax_match_score": 0.5764705882352941,
+    "dataflow_match_score": 0.425531914893617
+  },
+  "codeBert": {
+    "precision": 0.8334568738937378,
+    "recall": 0.7906975746154785,
+    "f1": 0.8115143179893494
+  },
+  "count": 24
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1859_sorting_the_sentence",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.43643554169305165,
+    "ngram_match_score": 0.24632272091067084,
+    "weighted_ngram_match_score": 0.2971571242886835,
+    "syntax_match_score": 0.7341772151898734,
+    "dataflow_match_score": 0.46808510638297873
+  },
+  "codeBert": {
+    "precision": 0.8222880363464355,
+    "recall": 0.8526735305786133,
+    "f1": 0.837205171585083
+  },
+  "count": 25
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1815_maximum_number_of_groups_getting_fresh_donuts",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.40407756588428967,
+    "ngram_match_score": 0.2665112819109168,
+    "weighted_ngram_match_score": 0.329597876453672,
+    "syntax_match_score": 0.5864661654135338,
+    "dataflow_match_score": 0.43373493975903615
+  },
+  "codeBert": {
+    "precision": 0.8650228977203369,
+    "recall": 0.8454576730728149,
+    "f1": 0.8551283478736877
+  },
+  "count": 26
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1872_stone_game_viii",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2764258323930466,
+    "ngram_match_score": 0.13383987014303456,
+    "weighted_ngram_match_score": 0.18614917371486622,
+    "syntax_match_score": 0.5714285714285714,
+    "dataflow_match_score": 0.21428571428571427
+  },
+  "codeBert": {
+    "precision": 0.7806660532951355,
+    "recall": 0.8841490149497986,
+    "f1": 0.8291913270950317
+  },
+  "count": 27
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1827_minimum_operations_to_make_the_array_increasing",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4145910747960534,
+    "ngram_match_score": 0.3118545162938542,
+    "weighted_ngram_match_score": 0.3345463768382834,
+    "syntax_match_score": 0.6326530612244898,
+    "dataflow_match_score": 0.3793103448275862
+  },
+  "codeBert": {
+    "precision": 0.8905302882194519,
+    "recall": 0.9224759936332703,
+    "f1": 0.9062216877937317
+  },
+  "count": 28
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1876_substrings_of_size_three_with_distinct_characters",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.47301685779132774,
+    "ngram_match_score": 0.5694475321817374,
+    "weighted_ngram_match_score": 0.5817967621648861,
+    "syntax_match_score": 0.4827586206896552,
+    "dataflow_match_score": 0.25806451612903225
+  },
+  "codeBert": {
+    "precision": 0.9381535649299622,
+    "recall": 0.9384915232658386,
+    "f1": 0.9383225440979004
+  },
+  "count": 29
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1838_frequency_of_the_most_frequent_element",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3863597319440623,
+    "ngram_match_score": 0.15470301548114448,
+    "weighted_ngram_match_score": 0.26534891539107985,
+    "syntax_match_score": 0.6842105263157895,
+    "dataflow_match_score": 0.4411764705882353
+  },
+  "codeBert": {
+    "precision": 0.847625732421875,
+    "recall": 0.8273714780807495,
+    "f1": 0.8373761177062988
+  },
+  "count": 30
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1894_find_the_student_that_will_replace_the_chalk",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.399436152472877,
+    "ngram_match_score": 0.223747848819456,
+    "weighted_ngram_match_score": 0.2404933597115079,
+    "syntax_match_score": 0.5918367346938775,
+    "dataflow_match_score": 0.5416666666666666
+  },
+  "codeBert": {
+    "precision": 0.8529620170593262,
+    "recall": 0.8389451503753662,
+    "f1": 0.845895528793335
+  },
+  "count": 31
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1840_maximum_building_height",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3006877297005397,
+    "ngram_match_score": 0.129660176508093,
+    "weighted_ngram_match_score": 0.14261108230620909,
+    "syntax_match_score": 0.5370370370370371,
+    "dataflow_match_score": 0.39344262295081966
+  },
+  "codeBert": {
+    "precision": 0.7714312672615051,
+    "recall": 0.7907378673553467,
+    "f1": 0.780965268611908
+  },
+  "count": 32
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1833_maximum_ice_cream_bars",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.36573312178895967,
+    "ngram_match_score": 0.13642268676959532,
+    "weighted_ngram_match_score": 0.2047149285913716,
+    "syntax_match_score": 0.5833333333333334,
+    "dataflow_match_score": 0.5384615384615384
+  },
+  "codeBert": {
+    "precision": 0.7793030142784119,
+    "recall": 0.8961717486381531,
+    "f1": 0.8336614370346069
+  },
+  "count": 33
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1851_minimum_interval_to_include_each_query",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.417753161305241,
+    "ngram_match_score": 0.19525094958187797,
+    "weighted_ngram_match_score": 0.22005393308200832,
+    "syntax_match_score": 0.6666666666666666,
+    "dataflow_match_score": 0.589041095890411
+  },
+  "codeBert": {
+    "precision": 0.7855606079101562,
+    "recall": 0.7926299571990967,
+    "f1": 0.7890794277191162
+  },
+  "count": 34
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1854_maximum_population_year",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2855070622091596,
+    "ngram_match_score": 0.2810264965724269,
+    "weighted_ngram_match_score": 0.314467734292453,
+    "syntax_match_score": 0.3026315789473684,
+    "dataflow_match_score": 0.24390243902439024
+  },
+  "codeBert": {
+    "precision": 0.8232566118240356,
+    "recall": 0.8548261523246765,
+    "f1": 0.8387444019317627
+  },
+  "count": 35
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1828_queries_on_number_of_points_inside_a_circle",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.4511638040235576,
+    "ngram_match_score": 0.45273351204442536,
+    "weighted_ngram_match_score": 0.46969948182758287,
+    "syntax_match_score": 0.49333333333333335,
+    "dataflow_match_score": 0.3888888888888889
+  },
+  "codeBert": {
+    "precision": 0.890542209148407,
+    "recall": 0.9332111477851868,
+    "f1": 0.9113775491714478
+  },
+  "count": 36
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1844_replace_all_digits_with_characters",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4559103367009377,
+    "ngram_match_score": 0.40548786017792193,
+    "weighted_ngram_match_score": 0.43482015329249546,
+    "syntax_match_score": 0.4,
+    "dataflow_match_score": 0.5833333333333334
+  },
+  "codeBert": {
+    "precision": 0.9288315176963806,
+    "recall": 0.9118175506591797,
+    "f1": 0.920245885848999
+  },
+  "count": 37
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1807_evaluate_the_bracket_pairs_of_a_string",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.5214115108440088,
+    "ngram_match_score": 0.35863059485577053,
+    "weighted_ngram_match_score": 0.3856597744913233,
+    "syntax_match_score": 0.6336633663366337,
+    "dataflow_match_score": 0.7076923076923077
+  },
+  "codeBert": {
+    "precision": 0.8708374500274658,
+    "recall": 0.8321318030357361,
+    "f1": 0.8510447144508362
+  },
+  "count": 38
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1861_rotating_the_box",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.5925988218192428,
+    "ngram_match_score": 0.41531586140871823,
+    "weighted_ngram_match_score": 0.4993258770914487,
+    "syntax_match_score": 0.6883116883116883,
+    "dataflow_match_score": 0.7674418604651163
+  },
+  "codeBert": {
+    "precision": 0.9407540559768677,
+    "recall": 0.9112637639045715,
+    "f1": 0.925774097442627
+  },
+  "count": 39
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1802_maximum_value_at_a_given_index_in_a_bounded_array",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.39118489170091053,
+    "ngram_match_score": 0.25255165760213516,
+    "weighted_ngram_match_score": 0.26719314115127996,
+    "syntax_match_score": 0.5531914893617021,
+    "dataflow_match_score": 0.4918032786885246
+  },
+  "codeBert": {
+    "precision": 0.8316526412963867,
+    "recall": 0.8148258328437805,
+    "f1": 0.8231533169746399
+  },
+  "count": 40
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1884_egg_drop_with_2_eggs_and_n_floors",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2621087999070489,
+    "ngram_match_score": 0.12112912871737287,
+    "weighted_ngram_match_score": 0.14604474434322576,
+    "syntax_match_score": 0.5393258426966292,
+    "dataflow_match_score": 0.24193548387096775
+  },
+  "codeBert": {
+    "precision": 0.7661576867103577,
+    "recall": 0.7956996560096741,
+    "f1": 0.7806493043899536
+  },
+  "count": 41
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1881_maximum_value_after_insertion",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.21019306962891332,
+    "ngram_match_score": 0.07918816711001639,
+    "weighted_ngram_match_score": 0.15704784372092992,
+    "syntax_match_score": 0.3442622950819672,
+    "dataflow_match_score": 0.2602739726027397
+  },
+  "codeBert": {
+    "precision": 0.7538360953330994,
+    "recall": 0.896323025226593,
+    "f1": 0.8189278841018677
+  },
+  "count": 42
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1835_find_xor_sum_of_all_pairs_bitwise_and",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2293239225320708,
+    "ngram_match_score": 0.06790453106649774,
+    "weighted_ngram_match_score": 0.158512780683407,
+    "syntax_match_score": 0.3783783783783784,
+    "dataflow_match_score": 0.3125
+  },
+  "codeBert": {
+    "precision": 0.7753082513809204,
+    "recall": 0.9156880378723145,
+    "f1": 0.83967125415802
+  },
+  "count": 43
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1879_minimum_xor_sum_of_two_arrays",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.31658103283523775,
+    "ngram_match_score": 0.2014250381035881,
+    "weighted_ngram_match_score": 0.21731238952222462,
+    "syntax_match_score": 0.5691056910569106,
+    "dataflow_match_score": 0.27848101265822783
+  },
+  "codeBert": {
+    "precision": 0.8152263760566711,
+    "recall": 0.8486034274101257,
+    "f1": 0.8315801024436951
+  },
+  "count": 44
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1878_get_biggest_three_rhombus_sums_in_a_grid",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3429991512862415,
+    "ngram_match_score": 0.13643111137413347,
+    "weighted_ngram_match_score": 0.2091918673972062,
+    "syntax_match_score": 0.6263736263736264,
+    "dataflow_match_score": 0.4
+  },
+  "codeBert": {
+    "precision": 0.8441193103790283,
+    "recall": 0.8078367710113525,
+    "f1": 0.8255796432495117
+  },
+  "count": 45
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1834_single_threaded_cpu",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.55051870414593,
+    "ngram_match_score": 0.30024212372099407,
+    "weighted_ngram_match_score": 0.3241357750545066,
+    "syntax_match_score": 0.796875,
+    "dataflow_match_score": 0.7808219178082192
+  },
+  "codeBert": {
+    "precision": 0.8531671166419983,
+    "recall": 0.8807888031005859,
+    "f1": 0.8667579293251038
+  },
+  "count": 46
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1883_minimum_skips_to_arrive_at_meeting_on_time",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.40329177153762613,
+    "ngram_match_score": 0.2139382769985091,
+    "weighted_ngram_match_score": 0.25419838318850674,
+    "syntax_match_score": 0.5862068965517241,
+    "dataflow_match_score": 0.5588235294117647
+  },
+  "codeBert": {
+    "precision": 0.7796143293380737,
+    "recall": 0.8194705247879028,
+    "f1": 0.799045741558075
+  },
+  "count": 47
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1899_merge_triplets_to_form_target_triplet",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2568438577228292,
+    "ngram_match_score": 0.2518484748436482,
+    "weighted_ngram_match_score": 0.32362132991336723,
+    "syntax_match_score": 0.2413793103448276,
+    "dataflow_match_score": 0.21052631578947367
+  },
+  "codeBert": {
+    "precision": 0.8511019945144653,
+    "recall": 0.8873284459114075,
+    "f1": 0.8688377141952515
+  },
+  "count": 48
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1803_count_pairs_with_xor_in_a_range",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4087020054140248,
+    "ngram_match_score": 0.15369349424468512,
+    "weighted_ngram_match_score": 0.4668009294933919,
+    "syntax_match_score": 0.5660377358490566,
+    "dataflow_match_score": 0.4482758620689655
+  },
+  "codeBert": {
+    "precision": 0.8759422302246094,
+    "recall": 0.716198742389679,
+    "f1": 0.7880567908287048
+  },
+  "count": 49
+}
+{
+  "prompt_technik": "Zero_shot",
+  "task_id": "/java/g1801_1900/s1889_minimum_space_wasted_from_packaging",
+  "model_name": "mixtral-8x7b-32768",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.37765933372972865,
+    "ngram_match_score": 0.10763569927966164,
+    "weighted_ngram_match_score": 0.1887909816905018,
+    "syntax_match_score": 0.6187050359712231,
+    "dataflow_match_score": 0.5955056179775281
+  },
+  "codeBert": {
+    "precision": 0.8400793075561523,
+    "recall": 0.7937793135643005,
+    "f1": 0.8162732720375061
+  },
+  "count": 50
+}

@@ -1,12 +1,11 @@
 import math
-import time
 
 from scripts.daten_sammeln.chain_prompt import CoT, ToT, Few_shot, Zero_shot
 from scripts.generate_code import generate_code
 from scripts.metricken.codeBERT import evaluate_code_with_codeBert_score
 from scripts.metricken.code_bleu import code_bleu_score
 from scripts.metricken.korrektheit import korrektheit_evaluate, check_compilability
-from scripts.utils import extract_generated_code
+from scripts.utils import extract_generated_code, insert_code_into_solution_frame
 
 
 def pass_at_k(n, c, k):
@@ -54,29 +53,25 @@ def run_pass_at_k_evaluation(technik, task_id, model_name, model_type, formatted
     """
     success_count = 0
     compiler_success_count = 0
+    extra_prompt_message = ""
 
     for i in range(max_value):
-        while True:
-            generated_code = generate_code(model_name, model_type, formatted_prompt)
-            print("generated code: ", generated_code)
-            extract_code = extract_generated_code(generated_code)
-            print("extracted_code: ", extract_code)
-            if extract_code is not None and extract_code != "":
-                break
-            time.sleep(2)  # Verzögerung von 2 Sekunden vor dem erneuten Versuch
-
+        current_prompt = formatted_prompt + "\n" + extra_prompt_message
+        print(current_prompt)
+        extract_code = generate_and_extract_code(model_name, model_type, current_prompt)
+        print("Extracting code:\n", extract_code)
         korrektheit_result = evaluate_code_correctness(extract_code, test_content)
         compiler_result = evaluate_code_compilable(extract_code)
         print("i: ", i)
-        if any(result.get("status") == "success" for result in korrektheit_result):
+        if korrektheit_result == "success":
             success_count += 1
+            extra_prompt_message = ""  # Reset the extra message if successful
+        else:
+            extra_prompt_message = "check more on the example and try to create code pass this scenarios!"
         print("  success_count: ", success_count)
-
         # Summiere die Compiler-Ergebnisse
         if compiler_result:
             compiler_success_count += 1
-
-        time.sleep(2)  # Verzögerung von 2 Sekunden pro Anfrage
 
     pass_k_value = pass_at_k(max_value, success_count, k_value)
     average_korrektheit_score = success_count / max_value
@@ -105,14 +100,12 @@ def run_normal_evaluation(technik, task_id, model_name, model_type, generated_co
     precision, recall, f1 = evaluate_code_codeBert(generated_code, code_content)
     codebleu_score = evaluate_code_with_code_bleu(generated_code, code_content)
 
-    status = "success" if any(result.get("status") == "success" for result in korrektheit_result) else "failure"
-
     return {
         "prompt_technik": technik,
         "task_id": task_id,
         "model_name": model_name,
         "model_type": model_type,
-        "completion": status,
+        "completion": korrektheit_result,
         "compilable": compiler_result,
         "code_bleu_score": codebleu_score,
         "codeBert": {
@@ -150,32 +143,37 @@ def process_evaluations(data, model_name, model_type, evaluation_method, technik
             print("count: ", count)
             return result, success
         elif evaluation_method == "normal":
-            while True:
-                generated_code = generate_code(model_name, model_type, formatted_prompt)
-                print("generated code: ", generated_code)
-                extract_code = extract_generated_code(generated_code)
-                print("extracted_code: ", extract_code)
-                if extract_code is not None and extract_code != "":
-                    break
-                time.sleep(2)  # Verzögerung von 2 Sekunden vor dem erneuten Versuch
-
-            count += 1
-            result = run_normal_evaluation(technik, task_id, model_name, model_type, extract_code,
+            extracted_code = generate_and_extract_code(model_name, model_type, formatted_prompt)
+            print("extracted code:\n", extracted_code)
+            result = run_normal_evaluation(technik, task_id, model_name, model_type, extracted_code,
                                            referenz_code,
                                            test_code)
             if result is not None:
+                count += 1
                 if result.get("completion") == "success":
                     success += 1
-                    print("success: ", success)
+                    print("success_normal_count: ", success)
                 result.update({
                     "task_id": task_id,
                     "model_name": model_name,
                     "model_type": model_type,
-                    "count": count + 1
+                    "count": count
                 })
             results.append(result)
             print("count: ", count)
     return results, success
+
+
+def generate_and_extract_code(model_name, model_type, formatted_prompt):
+    """
+    Generiert und extrahiert Code, bis ein gültiger Code gefunden wird.
+    """
+    while True:
+        generated_code = generate_code(model_name, model_type, formatted_prompt)
+        extract_code = extract_generated_code(generated_code)
+        insert_to_package_frame = insert_code_into_solution_frame(extract_code)
+        if extract_code is not None and extract_code != "":
+            return insert_to_package_frame
 
 
 def create_prompt(technik, raw_prompt):

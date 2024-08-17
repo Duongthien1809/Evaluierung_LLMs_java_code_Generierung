@@ -7,13 +7,10 @@ def korrektheit_evaluate(code, test_code):
     """
     Bewertet den Code, indem er in das Maven-Projekt eingefügt, gebaut und getestet wird.
     """
-    results = []
+    results = ""
 
     if not code or not test_code:
-        results.append({
-            "status": "failure",
-        })
-        return results
+        return "failed"
 
     # Verzeichnisse sicherstellen
     solution_dir = os.path.join("project", "src", "main", "java", "referenz")
@@ -36,15 +33,9 @@ def korrektheit_evaluate(code, test_code):
     return_code, stdout, stderr = run_maven_build('install')
 
     if return_code == 0:
-        results.append({
-            "status": "success",
-        })
+        return "success"
     else:
-        results.append({
-            "status": "failure",
-        })
-
-    return results
+        return "false"
 
 
 def check_compilability(code):

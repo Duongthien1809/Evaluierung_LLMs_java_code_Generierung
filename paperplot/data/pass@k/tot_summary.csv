@@ -1,0 +1,11 @@
+prompt_technik,task_id,model_name,model_type,n_runs,successful_evaluations,pass_at_k,completion_score,compilable_score
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,gpt35,openai,50,23,0.45999999999999996,0.46,0.62
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,llama-guard-3-8b,llama,50,9,0.18000000000000005,0.18,0.6
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,llama3-groq-8b-8192-tool-use-preview,llama,50,6,0.12,0.12,0.4
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,llama3-8b-8192,llama,50,7,0.14,0.14,0.5
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,gemma-7b-it,llama,50,1,0.020000000000000018,0.02,0.42
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,llama3-groq-70b-8192-tool-use-preview,llama,50,4,0.07999999999999996,0.08,0.54
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,gemma2-9b-it,llama,50,6,0.12,0.12,0.48
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,llama-3.1-70b-versatile,llama,50,7,0.14,0.14,0.6
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,mixtral-8x7b-32768,llama,50,2,0.040000000000000036,0.04,0.6
+ToT,/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time,gemma2-9b-it,llama,50,0,0.0,0.0,0.98

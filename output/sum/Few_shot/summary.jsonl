@@ -1,0 +1,20 @@
+
+{
+  "prompt_technik": "Few_shot",
+  "model_name": "llama3-groq-8b-8192-tool-use-preview",
+  "total_evaluated": 50,
+  "completion_evaluation": 0.14,
+  "compilable_evaluation": 0.62,
+  "code_bleu_average_score": {
+    "bleu_score": 0.37524478345300266,
+    "ngram_match_score": 0.19826491726378656,
+    "weighted_ngram_match_score": 0.2977318130220861,
+    "syntax_match_score": 0.5106263688060079,
+    "dataflow_match_score": 0.47435603472013016
+  },
+  "codeBert_average_score": {
+    "codeBert_average_precision": 0.8119729971885681,
+    "codeBert_average_recall": 0.7531813752651214,
+    "codeBert_average_f1": 0.7805952191352844
+  }
+}

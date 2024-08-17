@@ -1,0 +1,165 @@
+[
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama-guard-3-8b",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.02,
+    "compilable_evaluation": 0.6,
+    "code_bleu_average_score.bleu_score": 0.3941615203406665,
+    "code_bleu_average_score.ngram_match_score": 0.0040521010075612145,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.24772218548330976,
+    "code_bleu_average_score.syntax_match_score": 0.3248717948717949,
+    "code_bleu_average_score.dataflow_match_score": 0.02,
+    "codeBert_average_score.codeBert_average_precision": 0.7144500708580017,
+    "codeBert_average_score.codeBert_average_recall": 0.46482894718647005,
+    "codeBert_average_score.codeBert_average_f1": 0.5625536203384399
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama3-70b-8192",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.18,
+    "compilable_evaluation": 0.48,
+    "code_bleu_average_score.bleu_score": 0.4068466551565662,
+    "code_bleu_average_score.ngram_match_score": 0.27128099146826323,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.3447458807192387,
+    "code_bleu_average_score.syntax_match_score": 0.5420222418411486,
+    "code_bleu_average_score.dataflow_match_score": 0.4693375065976142,
+    "codeBert_average_score.codeBert_average_precision": 0.8354519367218017,
+    "codeBert_average_score.codeBert_average_recall": 0.782436455488205,
+    "codeBert_average_score.codeBert_average_f1": 0.8077642714977264
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "mixtral-8x7b-32768",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.22,
+    "compilable_evaluation": 0.52,
+    "code_bleu_average_score.bleu_score": 0.37581094118910535,
+    "code_bleu_average_score.ngram_match_score": 0.22332050961879968,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.308189271395278,
+    "code_bleu_average_score.syntax_match_score": 0.5235531485744279,
+    "code_bleu_average_score.dataflow_match_score": 0.4081808351679158,
+    "codeBert_average_score.codeBert_average_precision": 0.8238744282722473,
+    "codeBert_average_score.codeBert_average_recall": 0.8192141795158386,
+    "codeBert_average_score.codeBert_average_f1": 0.819368017911911
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "gpt35",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.52,
+    "compilable_evaluation": 0.94,
+    "code_bleu_average_score.bleu_score": 0.3794828655694179,
+    "code_bleu_average_score.ngram_match_score": 0.2080786629800934,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.26127820052867246,
+    "code_bleu_average_score.syntax_match_score": 0.5730319363481324,
+    "code_bleu_average_score.dataflow_match_score": 0.4755426624207736,
+    "codeBert_average_score.codeBert_average_precision": 0.8061071276664734,
+    "codeBert_average_score.codeBert_average_recall": 0.7942000722885132,
+    "codeBert_average_score.codeBert_average_f1": 0.7995187532901764
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "gemma-7b-it",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.06,
+    "compilable_evaluation": 0.64,
+    "code_bleu_average_score.bleu_score": 0.3751063820247984,
+    "code_bleu_average_score.ngram_match_score": 0.22907744737184108,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.31550978226608994,
+    "code_bleu_average_score.syntax_match_score": 0.5164505566874339,
+    "code_bleu_average_score.dataflow_match_score": 0.4393877417738286,
+    "codeBert_average_score.codeBert_average_precision": 0.8321486914157867,
+    "codeBert_average_score.codeBert_average_recall": 0.797156742811203,
+    "codeBert_average_score.codeBert_average_f1": 0.8137819159030915
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama-3.1-70b-versatile",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.52,
+    "compilable_evaluation": 0.84,
+    "code_bleu_average_score.bleu_score": 0.4100621055835833,
+    "code_bleu_average_score.ngram_match_score": 0.26189242982808475,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.32715105607197714,
+    "code_bleu_average_score.syntax_match_score": 0.5849061501204074,
+    "code_bleu_average_score.dataflow_match_score": 0.4662987863138637,
+    "codeBert_average_score.codeBert_average_precision": 0.8356393229961395,
+    "codeBert_average_score.codeBert_average_recall": 0.8315365922451019,
+    "codeBert_average_score.codeBert_average_f1": 0.8320278596878051
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama3-8b-8192",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.26,
+    "compilable_evaluation": 0.86,
+    "code_bleu_average_score.bleu_score": 0.3906645691949745,
+    "code_bleu_average_score.ngram_match_score": 0.23087349080761277,
+    "code_bleu_average_score.weighted_ngram_match_score": 0.3266860169463518,
+    "code_bleu_average_score.syntax_match_score": 0.5354249046980517,
+    "code_bleu_average_score.dataflow_match_score": 0.4696738643278816,
+    "codeBert_average_score.codeBert_average_precision": 0.8327936792373657,
+    "codeBert_average_score.codeBert_average_recall": 0.7732646846771241,
+    "codeBert_average_score.codeBert_average_f1": 0.8015489721298218
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama3-groq-70b-8192-tool-use-preview",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.22,
+    "compilable_evaluation": 0.48,
+    "code_bleu_average_score": {
+      "bleu_score": 0.32016865202982225,
+      "ngram_match_score": 0.17336978962001534,
+      "weighted_ngram_match_score": 0.220996700953756,
+      "syntax_match_score": 0.4190774565450381,
+      "dataflow_match_score": 0.34723066100047967
+    },
+    "codeBert_average_score": {
+      "codeBert_average_precision": 0.7909933876991272,
+      "codeBert_average_recall": 0.7669566392898559,
+      "codeBert_average_f1": 0.7780343067646026
+    }
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "llama3-groq-8b-8192-tool-use-preview",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.14,
+    "compilable_evaluation": 0.62,
+    "code_bleu_average_score": {
+      "bleu_score": 0.37524478345300266,
+      "ngram_match_score": 0.19826491726378656,
+      "weighted_ngram_match_score": 0.2977318130220861,
+      "syntax_match_score": 0.5106263688060079,
+      "dataflow_match_score": 0.47435603472013016
+    },
+    "codeBert_average_score": {
+      "codeBert_average_precision": 0.8119729971885681,
+      "codeBert_average_recall": 0.7531813752651214,
+      "codeBert_average_f1": 0.7805952191352844
+    }
+  },
+  {
+    "prompt_technik": "Few_shot",
+    "model_name": "gemma2-9b-it",
+    "total_evaluated": 50,
+    "completion_evaluation": 0.3,
+    "compilable_evaluation": 0.8,
+    "code_bleu_average_score": {
+      "bleu_score": 0.3741796774682368,
+      "ngram_match_score": 0.2143313057502529,
+      "weighted_ngram_match_score": 0.273109935411069,
+      "syntax_match_score": 0.5518304866703901,
+      "dataflow_match_score": 0.4574469820412355
+    },
+    "codeBert_average_score": {
+      "codeBert_average_precision": 0.8105059826374054,
+      "codeBert_average_recall": 0.808248074054718,
+      "codeBert_average_f1": 0.8083995079994202
+    }
+  }
+]
+

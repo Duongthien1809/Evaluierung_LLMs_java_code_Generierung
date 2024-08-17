@@ -2,7 +2,6 @@ import argparse
 import json
 import os
 import threading
-import time
 
 from scripts.evaluation import process_evaluations
 from scripts.utils import save_results_as_jsonl, save_summary_as_jsonl
@@ -64,20 +63,10 @@ def summarize_results(results, count, success, evaluation_method, model_name, te
     return results, summary
 
 
-def ensure_directory_exists(filename, model_name):
-    """Stellt sicher, dass ein Verzeichnis unter './output/' mit dem Modellnamen existiert.
-       Wenn nicht, wird es erstellt und der vollständige Pfad zur Datei zurückgegeben."""
-    # Erstelle den vollständigen Pfad zum Verzeichnis unter './output/'
-    directory = os.path.join('./output', model_name)
-
-    # Überprüfe, ob das Verzeichnis existiert, und erstelle es bei Bedarf
+def ensure_directory_exists(directory):
+    """Stellt sicher, dass ein Verzeichnis existiert. Wenn nicht, wird es erstellt."""
     if not os.path.exists(directory):
         os.makedirs(directory)
-
-    # Kombiniere das Verzeichnis mit dem Dateinamen
-    file_path = os.path.join(directory, filename)
-
-    return file_path
 
 
 def load_leetcode_dataset():
@@ -108,11 +97,17 @@ def main(model_name, model_type, output_file, evaluation_method, max_count, tech
     # Ensure directories exist
 
     if evaluation_method == "pass_at_k":
-        summary_file = (f"./output/passK/{technik}_pass@{k_value}"
-                        ".jsonl")
+        directory = f"./output/passK/{technik}"
+        ensure_directory_exists(directory)
+        summary_file = os.path.join(directory, f"pass@{k_value}.jsonl")
     else:
-        save_results_as_jsonl(results, ensure_directory_exists(f"{technik}_{output_file}", model_name))
-        summary_file = f"./output/sum/{technik}_summary.jsonl"
+        directory = f"./output/{model_name}/{technik}"
+        ensure_directory_exists(directory)
+        save_results_as_jsonl(results, os.path.join(directory, output_file))
+
+        summary_directory = f"./output/sum/{technik}"
+        ensure_directory_exists(summary_directory)
+        summary_file = os.path.join(summary_directory, "summary.jsonl")
 
     # Save results and summary
     save_summary_as_jsonl(summary, summary_file)
@@ -165,56 +160,40 @@ def generate_evaluations(technik, k_value, output_file_format="output.jsonl"):
     dem Modellnamen, dem k-Wert und dem Ausgabedateiformat.
     """
     model_configs = [
-        {"model_name": "gpt35", "model_type": "openai", "max_count": 50},
+        # {"model_name": "gpt35", "model_type": "openai", "max_count": 50},
+        # {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama-guard-3-8b", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-70b-8192", "model_type": "llama", "max_count": 50},
+        # #
+        # {"model_name": "gemma-7b-it", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-8b-8192", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        # {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
+        #
         {"model_name": "gemma2-9b-it", "model_type": "llama", "max_count": 50},
-        {"model_name": "gemma-7b-it", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama-3.1-70b-versatile", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama-guard-3-8b", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama3-70b-8192", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama3-8b-8192", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama3-groq-70b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
-        {"model_name": "llama3-groq-8b-8192-tool-use-preview", "model_type": "llama", "max_count": 50},
-        {"model_name": "mixtral-8x7b-32768", "model_type": "llama", "max_count": 50},
         # Weitere Modelle hier hinzufügen
     ]
 
     evaluations = []
     for config in model_configs:
+        # evaluations.append({
+        #     "model_name": config["model_name"],
+        #     "model_type": config["model_type"],
+        #     "output_file": output_file_format,
+        #     "evaluation_method": "normal",
+        #     "max_count": config["max_count"],
+        #     "technik": technik,
+        #     "k_value": k_value
+        # })
         evaluations.append({
             "model_name": config["model_name"],
             "model_type": config["model_type"],
             "output_file": output_file_format,
-            "evaluation_method": "normal",
+            "evaluation_method": "pass_at_k",
             "max_count": config["max_count"],
             "technik": technik,
             "k_value": k_value
-        })
-        evaluations.append({
-            "model_name": config["model_name"],
-            "model_type": config["model_type"],
-            "output_file": output_file_format,
-            "evaluation_method": "pass_at_k",
-            "max_count": config["max_count"],
-            "technik": technik,
-            "k_value": k_value
-        })
-        evaluations.append({
-            "model_name": config["model_name"],
-            "model_type": config["model_type"],
-            "output_file": output_file_format,
-            "evaluation_method": "pass_at_k",
-            "max_count": config["max_count"],
-            "technik": technik,
-            "k_value": k_value + 4
-        })
-        evaluations.append({
-            "model_name": config["model_name"],
-            "model_type": config["model_type"],
-            "output_file": output_file_format,
-            "evaluation_method": "pass_at_k",
-            "max_count": config["max_count"],
-            "technik": technik,
-            "k_value": k_value + 9
         })
     return evaluations
 
@@ -222,7 +201,6 @@ def generate_evaluations(technik, k_value, output_file_format="output.jsonl"):
 if __name__ == "__main__":
     # Set your arguments here
     evaluations = generate_evaluations('CoT', 1, "output.jsonl")
-    print(evaluations)
     threads = []
     for eval_params in evaluations:
         thread = run_evaluation_in_thread(eval_params["model_name"], eval_params["model_type"],

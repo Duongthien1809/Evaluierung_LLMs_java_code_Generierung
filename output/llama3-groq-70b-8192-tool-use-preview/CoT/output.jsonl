@@ -1,0 +1,1050 @@
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1870_minimum_speed_to_arrive_on_time",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.39584291332285826,
+    "ngram_match_score": 0.13843181556545756,
+    "weighted_ngram_match_score": 0.2836995276484562,
+    "syntax_match_score": 0.5333333333333333,
+    "dataflow_match_score": 0.627906976744186
+  },
+  "codeBert": {
+    "precision": 0.7988598942756653,
+    "recall": 0.7305416464805603,
+    "f1": 0.763174831867218
+  },
+  "count": 1
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1819_number_of_different_subsequences_gcds",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.17872599151672447,
+    "ngram_match_score": 0.09741698569029145,
+    "weighted_ngram_match_score": 0.1259925789984841,
+    "syntax_match_score": 0.3287037037037037,
+    "dataflow_match_score": 0.16279069767441862
+  },
+  "codeBert": {
+    "precision": 0.7469205260276794,
+    "recall": 0.7847437262535095,
+    "f1": 0.7653650641441345
+  },
+  "count": 2
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1897_redistribute_characters_to_make_all_strings_equal",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3364539385701132,
+    "ngram_match_score": 0.35041196175469425,
+    "weighted_ngram_match_score": 0.37416885276672235,
+    "syntax_match_score": 0.43373493975903615,
+    "dataflow_match_score": 0.1875
+  },
+  "codeBert": {
+    "precision": 0.7644568085670471,
+    "recall": 0.7825409173965454,
+    "f1": 0.7733931541442871
+  },
+  "count": 3
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1848_minimum_distance_to_the_target_element",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.6231383184843002,
+    "ngram_match_score": 0.48205953175399124,
+    "weighted_ngram_match_score": 0.6694084708653804,
+    "syntax_match_score": 0.6744186046511628,
+    "dataflow_match_score": 0.6666666666666666
+  },
+  "codeBert": {
+    "precision": 0.9076786637306213,
+    "recall": 0.8242676258087158,
+    "f1": 0.8639646172523499
+  },
+  "count": 4
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1801_number_of_orders_in_the_backlog",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2621205886620915,
+    "ngram_match_score": 0.0017532187311605396,
+    "weighted_ngram_match_score": 0.01224637729651573,
+    "syntax_match_score": 0.034482758620689655,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6933532953262329,
+    "recall": 0.6002407073974609,
+    "f1": 0.6434459090232849
+  },
+  "count": 5
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1887_reduction_operations_to_make_the_array_elements_equal",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.413629473147369,
+    "ngram_match_score": 0.2212491565600341,
+    "weighted_ngram_match_score": 0.35794822320892916,
+    "syntax_match_score": 0.5128205128205128,
+    "dataflow_match_score": 0.5625
+  },
+  "codeBert": {
+    "precision": 0.8394210934638977,
+    "recall": 0.7581921219825745,
+    "f1": 0.7967416644096375
+  },
+  "count": 6
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1896_minimum_cost_to_change_the_final_value_of_expression",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.1877607382504926,
+    "ngram_match_score": 0.13262537389634485,
+    "weighted_ngram_match_score": 0.15063130131456665,
+    "syntax_match_score": 0.2443820224719101,
+    "dataflow_match_score": 0.22340425531914893
+  },
+  "codeBert": {
+    "precision": 0.7560834288597107,
+    "recall": 0.7957667708396912,
+    "f1": 0.7754177451133728
+  },
+  "count": 7
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1856_maximum_subarray_min_product",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.27765233612112894,
+    "ngram_match_score": 0.0018479900985334558,
+    "weighted_ngram_match_score": 0.03733278295741093,
+    "syntax_match_score": 0.07142857142857142,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.7241533398628235,
+    "recall": 0.5702231526374817,
+    "f1": 0.6380353569984436
+  },
+  "count": 8
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1877_minimize_maximum_pair_sum_in_array",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2698269064610707,
+    "ngram_match_score": 0.0071646785744866204,
+    "weighted_ngram_match_score": 0.01951136832242784,
+    "syntax_match_score": 0.05263157894736842,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6856145262718201,
+    "recall": 0.6304017901420593,
+    "f1": 0.6568499207496643
+  },
+  "count": 9
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1850_minimum_adjacent_swaps_to_reach_the_kth_smallest_number",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.25927642514256827,
+    "ngram_match_score": 0.002286133710976942,
+    "weighted_ngram_match_score": 0.014819566859296206,
+    "syntax_match_score": 0.02,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6652117967605591,
+    "recall": 0.5840509533882141,
+    "f1": 0.6219949722290039
+  },
+  "count": 10
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1846_maximum_element_after_decreasing_and_rearranging",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.24875649950384693,
+    "ngram_match_score": 0.15524727367870572,
+    "weighted_ngram_match_score": 0.2094814441342784,
+    "syntax_match_score": 0.3655913978494624,
+    "dataflow_match_score": 0.2647058823529412
+  },
+  "codeBert": {
+    "precision": 0.831876814365387,
+    "recall": 0.9129204154014587,
+    "f1": 0.8705164194107056
+  },
+  "count": 11
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1813_sentence_similarity_iii",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2079989932757627,
+    "ngram_match_score": 0.0381418268471952,
+    "weighted_ngram_match_score": 0.0993581660455897,
+    "syntax_match_score": 0.4217687074829932,
+    "dataflow_match_score": 0.2727272727272727
+  },
+  "codeBert": {
+    "precision": 0.7709354758262634,
+    "recall": 0.883465588092804,
+    "f1": 0.8233734369277954
+  },
+  "count": 12
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1822_sign_of_the_product_of_an_array",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.40771342654015535,
+    "ngram_match_score": 0.36246594625678097,
+    "weighted_ngram_match_score": 0.3895998811159618,
+    "syntax_match_score": 0.5454545454545454,
+    "dataflow_match_score": 0.3333333333333333
+  },
+  "codeBert": {
+    "precision": 0.9368462562561035,
+    "recall": 0.9397792220115662,
+    "f1": 0.938310444355011
+  },
+  "count": 13
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1900_the_earliest_and_latest_rounds_where_players_compete",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.323262468069759,
+    "ngram_match_score": 0.07146806836638096,
+    "weighted_ngram_match_score": 0.21761354994440094,
+    "syntax_match_score": 0.6428571428571429,
+    "dataflow_match_score": 0.3611111111111111
+  },
+  "codeBert": {
+    "precision": 0.8026741147041321,
+    "recall": 0.7351213693618774,
+    "f1": 0.7674139738082886
+  },
+  "count": 14
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1830_minimum_number_of_operations_to_make_string_sorted",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.4151575805865069,
+    "ngram_match_score": 0.12355069129640521,
+    "weighted_ngram_match_score": 0.3745796310496225,
+    "syntax_match_score": 0.6,
+    "dataflow_match_score": 0.5625
+  },
+  "codeBert": {
+    "precision": 0.8651170134544373,
+    "recall": 0.734995424747467,
+    "f1": 0.7947654724121094
+  },
+  "count": 15
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1888_minimum_number_of_flips_to_make_the_binary_string_alternating",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3552129046975304,
+    "ngram_match_score": 0.229683464702003,
+    "weighted_ngram_match_score": 0.28446958949481704,
+    "syntax_match_score": 0.5909090909090909,
+    "dataflow_match_score": 0.3157894736842105
+  },
+  "codeBert": {
+    "precision": 0.7807726860046387,
+    "recall": 0.768241822719574,
+    "f1": 0.7744565010070801
+  },
+  "count": 16
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1817_finding_the_users_active_minutes",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.24077542129358107,
+    "ngram_match_score": 0.0927907906732032,
+    "weighted_ngram_match_score": 0.11665773762215771,
+    "syntax_match_score": 0.3504273504273504,
+    "dataflow_match_score": 0.4032258064516129
+  },
+  "codeBert": {
+    "precision": 0.7283728122711182,
+    "recall": 0.7560296654701233,
+    "f1": 0.7419436573982239
+  },
+  "count": 17
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1866_number_of_ways_to_rearrange_sticks_with_k_sticks_visible",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.25987489938545055,
+    "ngram_match_score": 0.0034034349378250952,
+    "weighted_ngram_match_score": 0.014819566859296206,
+    "syntax_match_score": 0.02127659574468085,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6704396605491638,
+    "recall": 0.601279079914093,
+    "f1": 0.6339787840843201
+  },
+  "count": 18
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1837_sum_of_digits_in_base_k",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.28362352623960224,
+    "ngram_match_score": 0.009064985221519245,
+    "weighted_ngram_match_score": 0.054000548308318345,
+    "syntax_match_score": 0.07142857142857142,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.719060480594635,
+    "recall": 0.6358058452606201,
+    "f1": 0.6748752593994141
+  },
+  "count": 19
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1864_minimum_number_of_swaps_to_make_the_binary_string_alternating",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.22955030905804058,
+    "ngram_match_score": 0.15745386504055908,
+    "weighted_ngram_match_score": 0.1726791893734213,
+    "syntax_match_score": 0.40625,
+    "dataflow_match_score": 0.18181818181818182
+  },
+  "codeBert": {
+    "precision": 0.7816120982170105,
+    "recall": 0.8133548498153687,
+    "f1": 0.7971676588058472
+  },
+  "count": 20
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1847_closest_room",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3692065343873045,
+    "ngram_match_score": 0.15698276523016502,
+    "weighted_ngram_match_score": 0.23907414154982226,
+    "syntax_match_score": 0.6,
+    "dataflow_match_score": 0.4807692307692308
+  },
+  "codeBert": {
+    "precision": 0.8057892322540283,
+    "recall": 0.785685658454895,
+    "f1": 0.7956104874610901
+  },
+  "count": 21
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1816_truncate_sentence",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.6174490807296578,
+    "ngram_match_score": 0.5131269329972381,
+    "weighted_ngram_match_score": 0.5220540053060084,
+    "syntax_match_score": 0.6346153846153846,
+    "dataflow_match_score": 0.8
+  },
+  "codeBert": {
+    "precision": 0.8933154344558716,
+    "recall": 0.8241499662399292,
+    "f1": 0.8573400378227234
+  },
+  "count": 22
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1869_longer_contiguous_segments_of_ones_than_zeros",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.26168824409896574,
+    "ngram_match_score": 0.0041556796823318705,
+    "weighted_ngram_match_score": 0.018207052811092132,
+    "syntax_match_score": 0.024390243902439025,
+    "dataflow_match_score": 1.0
+  },
+  "codeBert": {
+    "precision": 0.6447583436965942,
+    "recall": 0.5900386571884155,
+    "f1": 0.6161860227584839
+  },
+  "count": 23
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1814_count_nice_pairs_in_an_array",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3384641010447048,
+    "ngram_match_score": 0.18438571710114787,
+    "weighted_ngram_match_score": 0.20989454893010465,
+    "syntax_match_score": 0.6326530612244898,
+    "dataflow_match_score": 0.3269230769230769
+  },
+  "codeBert": {
+    "precision": 0.7894797921180725,
+    "recall": 0.7920128107070923,
+    "f1": 0.7907442450523376
+  },
+  "count": 24
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1859_sorting_the_sentence",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.378072904408427,
+    "ngram_match_score": 0.005187655676439712,
+    "weighted_ngram_match_score": 0.04043729529060175,
+    "syntax_match_score": 0.4666666666666667,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.7135626077651978,
+    "recall": 0.5732404589653015,
+    "f1": 0.6357507109642029
+  },
+  "count": 25
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1815_maximum_number_of_groups_getting_fresh_donuts",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.27623637841135407,
+    "ngram_match_score": 0.0020056906404245767,
+    "weighted_ngram_match_score": 0.04411629359322707,
+    "syntax_match_score": 0.058823529411764705,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6862431764602661,
+    "recall": 0.5474554896354675,
+    "f1": 0.609042763710022
+  },
+  "count": 26
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1872_stone_game_viii",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2971114998019495,
+    "ngram_match_score": 0.20193537661356498,
+    "weighted_ngram_match_score": 0.21458079803282964,
+    "syntax_match_score": 0.5614035087719298,
+    "dataflow_match_score": 0.21052631578947367
+  },
+  "codeBert": {
+    "precision": 0.8348299860954285,
+    "recall": 0.7804359197616577,
+    "f1": 0.8067170977592468
+  },
+  "count": 27
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1827_minimum_operations_to_make_the_array_increasing",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.4683389536003,
+    "ngram_match_score": 0.1630753895897271,
+    "weighted_ngram_match_score": 0.2671366121024428,
+    "syntax_match_score": 0.6739130434782609,
+    "dataflow_match_score": 0.7692307692307693
+  },
+  "codeBert": {
+    "precision": 0.7582961916923523,
+    "recall": 0.8232139945030212,
+    "f1": 0.7894227504730225
+  },
+  "count": 28
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1876_substrings_of_size_three_with_distinct_characters",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2663731300976349,
+    "ngram_match_score": 0.006216934650356319,
+    "weighted_ngram_match_score": 0.027017521224054385,
+    "syntax_match_score": 0.03225806451612903,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6932439208030701,
+    "recall": 0.6193676590919495,
+    "f1": 0.6542268395423889
+  },
+  "count": 29
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1838_frequency_of_the_most_frequent_element",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.23526018571588853,
+    "ngram_match_score": 0.08579425637684164,
+    "weighted_ngram_match_score": 0.1371512483914744,
+    "syntax_match_score": 0.4880952380952381,
+    "dataflow_match_score": 0.23
+  },
+  "codeBert": {
+    "precision": 0.7738507390022278,
+    "recall": 0.8686454892158508,
+    "f1": 0.8185126185417175
+  },
+  "count": 30
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1894_find_the_student_that_will_replace_the_chalk",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2254484537191733,
+    "ngram_match_score": 0.12052804359129289,
+    "weighted_ngram_match_score": 0.19988658073476626,
+    "syntax_match_score": 0.40594059405940597,
+    "dataflow_match_score": 0.17543859649122806
+  },
+  "codeBert": {
+    "precision": 0.7562181353569031,
+    "recall": 0.8811051845550537,
+    "f1": 0.8138988018035889
+  },
+  "count": 31
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1840_maximum_building_height",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.27597322024339593,
+    "ngram_match_score": 0.0025496346657572044,
+    "weighted_ngram_match_score": 0.03467657964115989,
+    "syntax_match_score": 0.06666666666666667,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.7225627899169922,
+    "recall": 0.582061767578125,
+    "f1": 0.644746720790863
+  },
+  "count": 32
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1833_maximum_ice_cream_bars",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.35890493030196563,
+    "ngram_match_score": 0.14174120801888726,
+    "weighted_ngram_match_score": 0.18784940715986925,
+    "syntax_match_score": 0.5675675675675675,
+    "dataflow_match_score": 0.5384615384615384
+  },
+  "codeBert": {
+    "precision": 0.7595899105072021,
+    "recall": 0.7717404365539551,
+    "f1": 0.7656169533729553
+  },
+  "count": 33
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1851_minimum_interval_to_include_each_query",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.46546929360168354,
+    "ngram_match_score": 0.2256427500243668,
+    "weighted_ngram_match_score": 0.3129010910490339,
+    "syntax_match_score": 0.75,
+    "dataflow_match_score": 0.5733333333333334
+  },
+  "codeBert": {
+    "precision": 0.8553142547607422,
+    "recall": 0.7971495389938354,
+    "f1": 0.8252082467079163
+  },
+  "count": 34
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1854_maximum_population_year",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.26766896220524483,
+    "ngram_match_score": 0.005282578503978954,
+    "weighted_ngram_match_score": 0.006569740905235598,
+    "syntax_match_score": 0.058823529411764705,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6545301079750061,
+    "recall": 0.6864156126976013,
+    "f1": 0.6700937747955322
+  },
+  "count": 35
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1828_queries_on_number_of_points_inside_a_circle",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3939856574590049,
+    "ngram_match_score": 0.27313037720379335,
+    "weighted_ngram_match_score": 0.42781225263222616,
+    "syntax_match_score": 0.5,
+    "dataflow_match_score": 0.375
+  },
+  "codeBert": {
+    "precision": 0.8277848362922668,
+    "recall": 0.8138682246208191,
+    "f1": 0.8207675814628601
+  },
+  "count": 36
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1844_replace_all_digits_with_characters",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2882150514004046,
+    "ngram_match_score": 0.008647922020227043,
+    "weighted_ngram_match_score": 0.060878950248057895,
+    "syntax_match_score": 0.08333333333333333,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6780047416687012,
+    "recall": 0.5824187397956848,
+    "f1": 0.6265873312950134
+  },
+  "count": 37
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1807_evaluate_the_bracket_pairs_of_a_string",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3660689653633547,
+    "ngram_match_score": 0.12056696683416422,
+    "weighted_ngram_match_score": 0.13635595344278398,
+    "syntax_match_score": 0.6823529411764706,
+    "dataflow_match_score": 0.525
+  },
+  "codeBert": {
+    "precision": 0.7697597742080688,
+    "recall": 0.7713170051574707,
+    "f1": 0.7705375552177429
+  },
+  "count": 38
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1861_rotating_the_box",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.3797768468212767,
+    "ngram_match_score": 0.26123373712456555,
+    "weighted_ngram_match_score": 0.305957273853921,
+    "syntax_match_score": 0.6714285714285714,
+    "dataflow_match_score": 0.2804878048780488
+  },
+  "codeBert": {
+    "precision": 0.8546880483627319,
+    "recall": 0.9069355726242065,
+    "f1": 0.8800370693206787
+  },
+  "count": 39
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1802_maximum_value_at_a_given_index_in_a_bounded_array",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.30207035259084314,
+    "ngram_match_score": 0.1785071056578035,
+    "weighted_ngram_match_score": 0.18788241281367718,
+    "syntax_match_score": 0.45,
+    "dataflow_match_score": 0.3918918918918919
+  },
+  "codeBert": {
+    "precision": 0.7701653242111206,
+    "recall": 0.7882787585258484,
+    "f1": 0.7791168093681335
+  },
+  "count": 40
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1884_egg_drop_with_2_eggs_and_n_floors",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.3075200251196962,
+    "ngram_match_score": 0.15460515937912878,
+    "weighted_ngram_match_score": 0.23286130473601985,
+    "syntax_match_score": 0.43636363636363634,
+    "dataflow_match_score": 0.40625
+  },
+  "codeBert": {
+    "precision": 0.8476392030715942,
+    "recall": 0.7890425324440002,
+    "f1": 0.8172918558120728
+  },
+  "count": 41
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1881_maximum_value_after_insertion",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.2834206387218893,
+    "ngram_match_score": 0.23908530110995924,
+    "weighted_ngram_match_score": 0.2632449712625247,
+    "syntax_match_score": 0.37209302325581395,
+    "dataflow_match_score": 0.25925925925925924
+  },
+  "codeBert": {
+    "precision": 0.8421843647956848,
+    "recall": 0.9030296802520752,
+    "f1": 0.8715463876724243
+  },
+  "count": 42
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1835_find_xor_sum_of_all_pairs_bitwise_and",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.541436041824024,
+    "ngram_match_score": 0.34678580779961243,
+    "weighted_ngram_match_score": 0.4752083594964835,
+    "syntax_match_score": 0.59375,
+    "dataflow_match_score": 0.75
+  },
+  "codeBert": {
+    "precision": 0.8951390385627747,
+    "recall": 0.7676188945770264,
+    "f1": 0.8264890909194946
+  },
+  "count": 43
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1879_minimum_xor_sum_of_two_arrays",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2714303288243446,
+    "ngram_match_score": 0.108274124221176,
+    "weighted_ngram_match_score": 0.12265429166791837,
+    "syntax_match_score": 0.514792899408284,
+    "dataflow_match_score": 0.34
+  },
+  "codeBert": {
+    "precision": 0.8010061979293823,
+    "recall": 0.7950204014778137,
+    "f1": 0.7980020642280579
+  },
+  "count": 44
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1878_get_biggest_three_rhombus_sums_in_a_grid",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.27202626821534615,
+    "ngram_match_score": 0.001274675605153505,
+    "weighted_ngram_match_score": 0.015401825827659558,
+    "syntax_match_score": 0.07142857142857142,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.736149787902832,
+    "recall": 0.5781458616256714,
+    "f1": 0.6476502418518066
+  },
+  "count": 45
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1834_single_threaded_cpu",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.26064686713413177,
+    "ngram_match_score": 0.0026766705810393992,
+    "weighted_ngram_match_score": 0.013595008481803447,
+    "syntax_match_score": 0.02631578947368421,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6312146186828613,
+    "recall": 0.5820395350456238,
+    "f1": 0.6056304574012756
+  },
+  "count": 46
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1883_minimum_skips_to_arrive_at_meeting_on_time",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.27046000054088964,
+    "ngram_match_score": 0.1743379914877991,
+    "weighted_ngram_match_score": 0.19675382933934274,
+    "syntax_match_score": 0.42245989304812837,
+    "dataflow_match_score": 0.2882882882882883
+  },
+  "codeBert": {
+    "precision": 0.8009710907936096,
+    "recall": 0.8062342405319214,
+    "f1": 0.8035939931869507
+  },
+  "count": 47
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1899_merge_triplets_to_form_target_triplet",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "success",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2733468926066593,
+    "ngram_match_score": 0.003531277315202113,
+    "weighted_ngram_match_score": 0.023189626444768456,
+    "syntax_match_score": 0.06666666666666667,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.728738009929657,
+    "recall": 0.6084752082824707,
+    "f1": 0.6631986498832703
+  },
+  "count": 48
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1803_count_pairs_with_xor_in_a_range",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": true,
+  "code_bleu_score": {
+    "codebleu": 0.2806357141629178,
+    "ngram_match_score": 0.001875641676686288,
+    "weighted_ngram_match_score": 0.054000548308318345,
+    "syntax_match_score": 0.06666666666666667,
+    "dataflow_match_score": 0
+  },
+  "codeBert": {
+    "precision": 0.6821884512901306,
+    "recall": 0.515487551689148,
+    "f1": 0.587236762046814
+  },
+  "count": 49
+}
+{
+  "prompt_technik": "CoT",
+  "task_id": "/java/g1801_1900/s1889_minimum_space_wasted_from_packaging",
+  "model_name": "llama3-groq-70b-8192-tool-use-preview",
+  "model_type": "llama",
+  "completion": "false",
+  "compilable": false,
+  "code_bleu_score": {
+    "codebleu": 0.4237422745476386,
+    "ngram_match_score": 0.17981577076004338,
+    "weighted_ngram_match_score": 0.31598666076384435,
+    "syntax_match_score": 0.6866666666666666,
+    "dataflow_match_score": 0.5125
+  },
+  "codeBert": {
+    "precision": 0.8694373369216919,
+    "recall": 0.7982105016708374,
+    "f1": 0.8323028087615967
+  },
+  "count": 50
+}
